@@ -15,7 +15,7 @@ namespace HelloEarthTwo
         {
 
             var heroFile = new Hero();
-            heroFile.CaptureUserInput(); 
+            heroFile.CaptureUserInput();
 
 
             //Enhance the application to prompt the user for their name and display it along with the date and time.
@@ -24,57 +24,14 @@ namespace HelloEarthTwo
 
         }
 
-        public class Hero
-        {
-
-            //Method captures userInput and stores it into an Object 
-            public object CaptureUserInput()
-            {
-                Console.WriteLine($"Whats your code name? ");
-                var heroName = Console.ReadLine();
-                Console.WriteLine($"Whats your powers? ");
-                var powers = Console.ReadLine();
-                Console.WriteLine($"Whats your secret identity? ");
-                var secretId = Console.ReadLine();
-                Console.WriteLine($"Whats your home world? ");
-                var homeWorld = Console.ReadLine();
-
-                Console.WriteLine($"{heroName}, {powers} , {secretId}, home world {homeWorld}");
-
-                Console.WriteLine($"{Environment.NewLine} Press any key to exit...");
-                Console.ReadKey(true);
-
-                string[] userInput = { heroName, powers, secretId, homeWorld };
-
-                var hero = new
-                {
-                    codeName = heroName,
-                    powers = powers,
-                    secretId = secretId,
-                    homeWorld = homeWorld
-
-                };
-                ConvertHeroInput(hero);
-                return hero;
-            }
-
-            //Method Converts captured userInput to Json  and writes to hero.json file
-            public void ConvertHeroInput(object hero)
-            {
-                string output = JsonConvert.SerializeObject(hero); // converting hero Object to json  
-                Console.WriteLine(output);
-             
-                // write json to .json file
-                File.WriteAllText(@"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\hero.json", output); // Writing our hero information to hero.json file
-               
-            }
-
-
-        }
 
 
     }
+
+
 }
+
+
 //There are lots of things to play around with in the console app such as logging things, getting input from user, or calling methods in other classes. Even connecting to the db
 
 //11:16
