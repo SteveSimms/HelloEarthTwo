@@ -33,6 +33,13 @@ namespace HelloEarthTwo
 
             Console.WriteLine($"{heroName}, {powers} , {secretId}, home world {homeWorld}");
 
+            //string readKeys = Console.ReadKey(true);
+            //if(readKeys == true )
+            //{
+
+
+            //}
+
             Console.WriteLine($"{Environment.NewLine} Press any key to exit...");
             Console.ReadKey(true);
 
@@ -47,7 +54,17 @@ namespace HelloEarthTwo
 
             };
 
-            ConvertHeroInput(hero);
+            if (hero.homeWorld == "Earth-2")
+            {
+
+                ConvertHeroInput(hero);
+            }
+            else
+            {
+                ConvertMultiverseHeroInput(hero);
+            }
+
+         
             return hero;
         }
 
@@ -59,6 +76,15 @@ namespace HelloEarthTwo
 
             // write json to .json file
             File.WriteAllText(@"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\hero.json", output); // Writing our hero information to hero.json file
+
+        }
+
+        public void ConvertMultiverseHeroInput(object hero)
+        {
+
+            string multiverseOutput = JsonConvert.SerializeObject(hero);
+            // write json to .json file
+            File.WriteAllText(@"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\multiverseHeroes.json", multiverseOutput); // Writing our hero information to hero.json file
 
         }
 

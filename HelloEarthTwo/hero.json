@@ -1,1 +1,6 @@
-{"codeName":"Superman","powers":"Flight, SUper human Strength, X-ray vision, etc..","secretId":"Val-Zod","homeWorld":"earth-2 via Krypton"}
+{
+  "codeName": "Superman",
+  "powers": "All the powers",
+  "secretId": "Val-Zod",
+  "homeWorld": "Earth-2"
+}
