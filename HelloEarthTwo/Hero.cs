@@ -30,44 +30,16 @@ namespace HelloEarthTwo
             var secretId = Console.ReadLine();
 
             Console.WriteLine($"Whats your home world? ");
-            var homeWorld = Console.ReadLine();
+            var homeWorld = Console.ReadLine(); //May have to write a if multiverse condition
 
             Console.WriteLine($"{heroName}, {powers} , {secretId}, home world {homeWorld}");
 
-            //Console.WriteLine("Would you like to add more heroes?");
-            //var yes = Console.ReadLine();
+            Console.WriteLine("Would you like to add more heroes?");
+            Console.WriteLine("Enter Yes or Y to add another Hero");
+            var userChoice = Console.ReadLine();
 
 
-            Console.WriteLine($"{Environment.NewLine} Press any key to exit...");
-            Console.ReadKey(true);
-
-            string[] userInput = { heroName, powers, secretId, homeWorld };
-            MultiAdd();
-            //ToDo lets create a multi add Conditional method 
-            //string readKeys = Console.ReadKey(true);
-            // Add Multiple heroes currently buggy fix logic on first line also dosent need to be recursive
-            void MultiAdd()
-            {
-
-                //if (Console.ReadKey().Key != ConsoleKey.Escape)
-                //{
-                //    //Call method here
-                //    CaptureUserInput();
-
-
-
-                //}
-
-                //else
-                //{
-                //    Console.WriteLine($"{Environment.NewLine} Press any key to exit...");
-                //    Console.ReadKey(true);
-                //}
-
-            }
-         
-
-            var hero = new
+            var hero = new  //Hero is being over written by the second and subsequent entry 
             {
                 codeName = heroName,
                 powers = powers,
@@ -77,6 +49,15 @@ namespace HelloEarthTwo
 
             };
 
+            var multiverseHeroes = new
+            {
+                codeName = heroName,
+                powers = powers,
+                secretId = secretId,
+                homeWorld = homeWorld
+            };
+
+
             if (hero.homeWorld == "Earth-2")
             {
 
@@ -84,9 +65,42 @@ namespace HelloEarthTwo
             }
             else
             {
-                ConvertMultiverseHeroInput(hero);
+                ConvertMultiverseHeroInput(multiverseHeroes);
             }
 
+            //Condition allows the user to add additional heroes Options move conditional to the Main method?
+            if (userChoice == "Yes")
+            {
+                return CaptureUserInput();
+
+            }
+            else if (userChoice == "yes")
+            {
+                return CaptureUserInput();
+
+            }
+            else if (userChoice == "y")
+            {
+                return CaptureUserInput();
+
+            }
+            else if (userChoice == "Affirmative")
+            {
+
+                return CaptureUserInput();
+            }
+            else
+            {
+                Console.WriteLine($"{Environment.NewLine} Press any key to exit...");
+                Console.ReadKey(true);
+
+            }
+
+
+
+
+            string[] userInput = { heroName, powers, secretId, homeWorld };
+            Console.WriteLine(userInput);
 
             return hero;
         }
@@ -97,17 +111,18 @@ namespace HelloEarthTwo
 
             string output = JsonConvert.SerializeObject(hero); // converting hero Object to json  
             Console.WriteLine(output);
-            var earth2FilePath = @"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\hero.json";
+            var earth2FilePath = @"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\earthTwoHeroes.json";
 
             // write json to .json file
             File.WriteAllText(earth2FilePath, output); // Writing our hero information to hero.json file
 
         }
 
-        public void ConvertMultiverseHeroInput(object hero)
+        public void ConvertMultiverseHeroInput(object multiverseHeroes)
         {
 
-            string multiverseOutput = JsonConvert.SerializeObject(hero);
+            string multiverseOutput = JsonConvert.SerializeObject(multiverseHeroes);
+            Console.WriteLine(multiverseOutput);
             var multiverseFilePath = @"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\multiverseHeroes.json";
             // write json to .json file
             File.WriteAllText(multiverseFilePath, multiverseOutput); // Writing our hero information to hero.json file
