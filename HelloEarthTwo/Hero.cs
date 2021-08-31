@@ -19,7 +19,7 @@ namespace HelloEarthTwo
         //Method captures userInput and stores it into an Object 
         public object CaptureUserInput()
         {
-            //Instantiationg new Heroes class on ReadLine() method 
+            //Instantiationg new Heroes class on ReadLine() method
             Console.WriteLine($"Whats your code name? ");
             var codeName = new Heroes();
             codeName.CodeName = Console.ReadLine();
@@ -39,6 +39,11 @@ namespace HelloEarthTwo
 
             homeWorld.HomeWorld = Console.ReadLine(); //May have to write a if multiverse condition
 
+            Console.WriteLine("What is your team affiliation?");
+            var teamAffiliation = new HeroesList();
+
+            teamAffiliation.TeamAffiliation = Console.ReadLine();
+
             Console.WriteLine("Are You to the best of your knowledge a clone?");
             var isClone = new Heroes();
 
@@ -51,7 +56,7 @@ namespace HelloEarthTwo
             var userChoice = Console.ReadLine();
 
 
-            //List<Heroes> powers = new List<Heroes>();
+
 
 
             var heroesOfEarthTwo = new  //Think about Refactoring to a List<object>
@@ -60,6 +65,7 @@ namespace HelloEarthTwo
                 powers = powers.Powers,
                 secretId = secretId.SecretId,
                 homeWorld = homeWorld.HomeWorld,
+                teamAffiliation = teamAffiliation.TeamAffiliation,
                 isClone = isClone.IsClone
 
 
@@ -72,31 +78,53 @@ namespace HelloEarthTwo
                 powers = powers.Powers,
                 secretId = secretId.SecretId,
                 homeWorld = homeWorld.HomeWorld,
+                teamAffiliation = teamAffiliation.TeamAffiliation,
                 isClone = isClone.IsClone
             };
 
 
-            // Condition checks to see if hero is a clone 
-            if (homeWorld.HomeWorld == "Earth-2")
+
+            // TODO: FIgure out how to write a TEST SO I dont have to Keep inputing The required Fields 
+
+            //Creating a new instance of THe HeroesList class so I can use the methods of that class in thia file
+            HeroesList callHeroesList = new HeroesList();
+
+            void sortHeroesByWorld()
             {
 
-                ConvertHeroInput(heroesOfEarthTwo);// Provide an instance name 
-            }
-            else if (heroesOfEarthTwo.isClone == "true")
-            {
-                ConvertHeroInput(heroesOfEarthTwo);
+                if (homeWorld.HomeWorld == "Earth-2")
+                {
 
-            }
-            else if (multiverseHeroes.isClone == "true")
-            {
-                ConvertMultiverseHeroInput(multiverseHeroes);
+                    callHeroesList.ConvertHeroInput(heroesOfEarthTwo);// Provide an instance name 
+                }
+                else if (heroesOfEarthTwo.isClone == "true")
+                {
+                    callHeroesList.ConvertHeroInput(heroesOfEarthTwo);
 
-            }
-            else
-            {
-                ConvertMultiverseHeroInput(multiverseHeroes);
+                }
+                else if (multiverseHeroes.isClone == "true")
+                {
+                    callHeroesList.ConvertMultiverseHeroInput(multiverseHeroes);
+
+
+                }
+                else if (multiverseHeroes.homeWorld != "Earth-2")
+                {
+
+                    callHeroesList.ConvertMultiverseHeroInput(multiverseHeroes);
+                }
+
+                else
+                {
+
+                    Console.WriteLine("System Can not find your origin in the multiverse....");
+                }
             }
 
+
+
+            sortHeroesByWorld();
+     
 
 
             //Condition allows the user to add additional heroes Options move conditional to the Main method?
@@ -130,35 +158,12 @@ namespace HelloEarthTwo
 
 
 
-            //object[] userInput = { heroesOfEarthTwo, multiverseHeroes };
-            //Console.WriteLine(userInput);
+            object[] userInput = { heroesOfEarthTwo, multiverseHeroes };
+            Console.WriteLine(userInput);
 
             return heroesOfEarthTwo;
         }
-        //TODO: Refactor Method to read json file and append to the file if no dupes exist unless the dupe is a clone 
-        //Method Converts captured hero to Json  and writes to hero.json file
-        public void ConvertHeroInput(object heroesOfEarthTwo)
-        {
 
-            string output = JsonConvert.SerializeObject(heroesOfEarthTwo); // converting hero Object to json  
-            Console.WriteLine(output);
-            var earth2FilePath = @"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\earthTwoHeroes.json";
-
-            // write json to .json file
-            File.WriteAllText(earth2FilePath, output); // Writing our hero information to hero.json file
-
-        }
-
-        public void ConvertMultiverseHeroInput(object multiverseHeroes)
-        {
-
-            string multiverseOutput = JsonConvert.SerializeObject(multiverseHeroes);
-            Console.WriteLine(multiverseOutput);
-            var multiverseFilePath = @"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\multiverseHeroes.json";
-            // write json to .json file
-            File.WriteAllText(multiverseFilePath, multiverseOutput); // Writing our hero information to hero.json file
-
-        }
 
     }
 
