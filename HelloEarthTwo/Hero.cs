@@ -19,54 +19,85 @@ namespace HelloEarthTwo
         //Method captures userInput and stores it into an Object 
         public object CaptureUserInput()
         {
-
+            //Instantiationg new Heroes class on ReadLine() method 
             Console.WriteLine($"Whats your code name? ");
-            var heroName = Console.ReadLine();
+            var codeName = new Heroes();
+            codeName.CodeName = Console.ReadLine();
 
             Console.WriteLine($"Whats your powers? ");
-            var powers = Console.ReadLine();
+            var powers = new Heroes();
+            powers.Powers = Console.ReadLine();
 
             Console.WriteLine($"Whats your secret identity? ");
-            var secretId = Console.ReadLine();
+
+            var secretId = new Heroes();
+            secretId.SecretId = Console.ReadLine();
+
 
             Console.WriteLine($"Whats your home world? ");
-            var homeWorld = Console.ReadLine(); //May have to write a if multiverse condition
+            var homeWorld = new Heroes();
 
-            Console.WriteLine($"{heroName}, {powers} , {secretId}, home world {homeWorld}");
+            homeWorld.HomeWorld = Console.ReadLine(); //May have to write a if multiverse condition
+
+            Console.WriteLine("Are You to the best of your knowledge a clone?");
+            var isClone = new Heroes();
+
+            isClone.IsClone = Console.ReadLine();
+
+            Console.WriteLine($"{codeName}, {powers} , {secretId}, home world {homeWorld} clone status:{isClone}");
 
             Console.WriteLine("Would you like to add more heroes?");
             Console.WriteLine("Enter Yes or Y to add another Hero");
             var userChoice = Console.ReadLine();
 
 
-            var hero = new  //Hero is being over written by the second and subsequent entry 
+            //List<Heroes> powers = new List<Heroes>();
+
+
+            var heroesOfEarthTwo = new  //Think about Refactoring to a List<object>
             {
-                codeName = heroName,
-                powers = powers,
-                secretId = secretId,
-                homeWorld = homeWorld
+                codeName = codeName.CodeName,
+                powers = powers.Powers,
+                secretId = secretId.SecretId,
+                homeWorld = homeWorld.HomeWorld,
+                isClone = isClone.IsClone
 
 
             };
 
-            var multiverseHeroes = new
+
+            var multiverseHeroes = new //Think about abstracting the hero objects into its own class
             {
-                codeName = heroName,
-                powers = powers,
-                secretId = secretId,
-                homeWorld = homeWorld
+                codeName = codeName.CodeName,
+                powers = powers.Powers,
+                secretId = secretId.SecretId,
+                homeWorld = homeWorld.HomeWorld,
+                isClone = isClone.IsClone
             };
 
 
-            if (hero.homeWorld == "Earth-2")
+            // Condition checks to see if hero is a clone 
+            if (homeWorld.HomeWorld == "Earth-2")
             {
 
-                ConvertHeroInput(hero);
+                ConvertHeroInput(heroesOfEarthTwo);// Provide an instance name 
+            }
+            else if (heroesOfEarthTwo.isClone == "true")
+            {
+                ConvertHeroInput(heroesOfEarthTwo);
+
+            }
+            else if (multiverseHeroes.isClone == "true")
+            {
+                ConvertMultiverseHeroInput(multiverseHeroes);
+
             }
             else
             {
                 ConvertMultiverseHeroInput(multiverseHeroes);
             }
+
+
 
             //Condition allows the user to add additional heroes Options move conditional to the Main method?
             if (userChoice == "Yes")
@@ -99,17 +130,17 @@ namespace HelloEarthTwo
 
 
 
-            string[] userInput = { heroName, powers, secretId, homeWorld };
-            Console.WriteLine(userInput);
+            //object[] userInput = { heroesOfEarthTwo, multiverseHeroes };
+            //Console.WriteLine(userInput);
 
-            return hero;
+            return heroesOfEarthTwo;
         }
-
-        //Method Converts captured userInput to Json  and writes to hero.json file
-        public void ConvertHeroInput(object hero)
+        //TODO: Refactor Method to read json file and append to the file if no dupes exist unless the dupe is a clone 
+        //Method Converts captured hero to Json  and writes to hero.json file
+        public void ConvertHeroInput(object heroesOfEarthTwo)
         {
 
-            string output = JsonConvert.SerializeObject(hero); // converting hero Object to json  
+            string output = JsonConvert.SerializeObject(heroesOfEarthTwo); // converting hero Object to json  
             Console.WriteLine(output);
             var earth2FilePath = @"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\earthTwoHeroes.json";
 
@@ -130,4 +161,7 @@ namespace HelloEarthTwo
         }
 
     }
+
+
+
 }
