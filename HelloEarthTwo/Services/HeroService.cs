@@ -13,7 +13,7 @@ using System.IO;
 namespace HelloEarthTwo
 {
 
-    public class Hero
+    public class HeroService
     {
 
         //Method captures userInput and stores it into an Object 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HelloEarthTwo
 {
-    public class Heroes : Hero
+    public class Heroes : HeroService
     {
         public string CodeName { get; set; }
         public string Powers { get; set; }
