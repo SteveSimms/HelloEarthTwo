@@ -14,7 +14,7 @@ namespace HelloEarthTwo
         static void Main(string[] args)
         {
 
-            var heroFile = new Hero();
+            var heroFile = new HeroService();
             heroFile.CaptureUserInput();
 
 
