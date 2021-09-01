@@ -15,10 +15,10 @@ namespace HelloEarthTwo
 
         //TODO: Refactor Method to read json file and append to the file if no dupes exist unless the dupe is a clone 
         //Method Converts captured hero to Json  and writes to hero.json file
-        public void ConvertHeroInput(object heroesOfEarthTwo)
+        public void ConvertHeroInput(object heroData)
         {
 
-            string output = JsonConvert.SerializeObject(heroesOfEarthTwo); // converting hero Object to json  
+            string output = JsonConvert.SerializeObject(heroData); // converting hero Object to json  
             Console.WriteLine(output);
             var earth2FilePath = @"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\earthTwoHeroes.json";
 
@@ -26,10 +26,10 @@ namespace HelloEarthTwo
             File.WriteAllText(earth2FilePath, output); // Writing our hero information to hero.json file
 
         }
-        public void ConvertMultiverseHeroInput(object multiverseHeroes)
+        public void ConvertMultiverseHeroInput(object heroData)
         {
 
-            string multiverseOutput = JsonConvert.SerializeObject(multiverseHeroes);
+            string multiverseOutput = JsonConvert.SerializeObject(heroData);
             Console.WriteLine(multiverseOutput);
             var multiverseFilePath = @"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\multiverseHeroes.json";
             // write json to .json file
