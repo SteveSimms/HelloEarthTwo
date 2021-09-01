@@ -17,7 +17,7 @@ namespace HelloEarthTwo
         public string TeamAffiliation { get; set; }
         public string IsClone { get; set; }
 
-        /* public List<string> Powers { get; set; } = new();*/ // Can use this to turn our powers property to a list 
+        public List<object> HeroData { get; set; } = new(); // Creating an instance of a List to store all of our above information Can use this to turn our powers property to a list 
 
     }
 

@@ -59,6 +59,8 @@ namespace HelloEarthTwo
 
 
 
+
+
             var heroesOfEarthTwo = new  //Think about Refactoring to a List<object>
             {
                 codeName = codeName.CodeName,
@@ -67,6 +69,7 @@ namespace HelloEarthTwo
                 homeWorld = homeWorld.HomeWorld,
                 teamAffiliation = teamAffiliation.TeamAffiliation,
                 isClone = isClone.IsClone
+
 
 
             };
@@ -80,13 +83,19 @@ namespace HelloEarthTwo
                 homeWorld = homeWorld.HomeWorld,
                 teamAffiliation = teamAffiliation.TeamAffiliation,
                 isClone = isClone.IsClone
+
             };
+            // Creating an instance of our Heroes class so that I can use the HeroData List <object> to store our HeroesData
+            Heroes heroData = new Heroes();
+            heroData.HeroData.Add(heroesOfEarthTwo); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
+            heroData.HeroData.Add(multiverseHeroes);
 
 
+            //Heroes.HeroData.Add();
 
             // TODO: FIgure out how to write a TEST SO I dont have to Keep inputing The required Fields 
 
-            //Creating a new instance of THe HeroesList class so I can use the methods of that class in thia file
+            //Creating a new instance of The HeroesList class so I can use the methods of that class in this file
             HeroesList callHeroesList = new HeroesList();
 
             void sortHeroesByWorld()
@@ -124,7 +133,7 @@ namespace HelloEarthTwo
 
 
             sortHeroesByWorld();
-     
+
 
 
             //Condition allows the user to add additional heroes Options move conditional to the Main method?
@@ -160,6 +169,7 @@ namespace HelloEarthTwo
 
             object[] userInput = { heroesOfEarthTwo, multiverseHeroes };
             Console.WriteLine(userInput);
+            Console.WriteLine($"The value of heroData is {heroData}");
 
             return heroesOfEarthTwo;
         }
