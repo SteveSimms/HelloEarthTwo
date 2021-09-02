@@ -21,6 +21,7 @@ namespace HelloEarthTwo
         {
             //Instantiationg new Heroes class on ReadLine() method
             Console.WriteLine($"Whats your code name? ");
+
             var codeName = new Heroes();
             codeName.CodeName = Console.ReadLine();
 
@@ -85,7 +86,7 @@ namespace HelloEarthTwo
                 isClone = isClone.IsClone
 
             };
-            // Creating an instance of our Heroes class so that I can use the HeroData List <object> to store our HeroesData
+            //Creating an instance of our Heroes class so that I can use the HeroData List<object> to store our HeroesData
             Heroes heroData = new Heroes();
             heroData.HeroData.Add(heroesOfEarthTwo); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
             heroData.HeroData.Add(multiverseHeroes);
@@ -101,7 +102,25 @@ namespace HelloEarthTwo
             void sortHeroesByWorld()
             {
 
-                if (homeWorld.HomeWorld == "Earth-2")
+                bool sendToEarth2()
+                {
+
+                    var worldCompare = homeWorld.HomeWorld == "Earth-2" || homeWorld.HomeWorld == "earth-2"
+                        || homeWorld.HomeWorld == "earth 2" || homeWorld.HomeWorld == "earth two"
+                        || homeWorld.HomeWorld == "EARTH TWO" || homeWorld.HomeWorld == "EARTH 2";
+                    return worldCompare;
+                }
+
+                bool sendToMultiverse()
+                {
+                    var worldCompare = multiverseHeroes.homeWorld != "Earth-2" || multiverseHeroes.homeWorld != "earth-2"
+                    || multiverseHeroes.homeWorld != "earth 2" || multiverseHeroes.homeWorld != "earth two"
+                    || multiverseHeroes.homeWorld != "EARTH TWO" || multiverseHeroes.homeWorld != "EARTH 2";
+                    return worldCompare;
+
+                }
+                //TODO: Edit sorting condition to allow diffrent spellings of earth-2 ie: earth-2, earth two EARTH TWO EARTH 2 etc etc 
+                if (sendToEarth2() == true)
                 {
 
                     callHeroesList.ConvertHeroInput(heroesOfEarthTwo);// Provide an instance name 
@@ -117,7 +136,7 @@ namespace HelloEarthTwo
 
 
                 }
-                else if (multiverseHeroes.homeWorld != "Earth-2")
+                else if (sendToMultiverse() == true)
                 {
 
                     callHeroesList.ConvertMultiverseHeroInput(multiverseHeroes);
@@ -169,7 +188,7 @@ namespace HelloEarthTwo
 
             object[] userInput = { heroesOfEarthTwo, multiverseHeroes };
             Console.WriteLine(userInput);
-            Console.WriteLine($"The value of heroData is {heroData}");
+            //Console.WriteLine($"The value of heroData is {heroData}");
 
             return heroesOfEarthTwo;
         }
