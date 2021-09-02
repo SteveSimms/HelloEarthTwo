@@ -155,6 +155,8 @@ namespace HelloEarthTwo
 
 
 
+
+
             //Condition allows the user to add additional heroes Options move conditional to the Main method?
             if (userChoice == "Yes")
             {
@@ -178,12 +180,35 @@ namespace HelloEarthTwo
             }
             else
             {
-                Console.WriteLine($"{Environment.NewLine} Press any key to exit...");
-                Console.ReadKey(true);
-
+                userInfoReadOut();
             }
 
+            //TODO: ASK if the user would  like A read out of his info 
+            void userInfoReadOut()
+            {
+                Console.WriteLine($"{codeName.CodeName}, Would you like a read out of your information? ");
+                var userDecision = Console.ReadLine();
 
+                var formattedString = String.Format($"{ codeName.CodeName,-10}   {powers.Powers,-10} {secretId.SecretId,7}  {homeWorld.HomeWorld,11} {teamAffiliation.TeamAffiliation,13} {isClone.IsClone,15}   ");
+
+                if (userDecision == "Yes" || userDecision == "Y" || userDecision == "y")
+                {
+                    // Display info in tabular format 
+                    Console.WriteLine("---------------------------------------------------------------------------------------");
+                    Console.WriteLine("Code Name | Powers  |  Secret Identity   | Home World | Team Affiliation | Clone Status");
+                    Console.WriteLine("---------------------------------------------------------------------------------------");
+                    Console.WriteLine(formattedString);
+                }
+                else
+                {
+                    Console.WriteLine($"Thank you for your service  {codeName.CodeName}. Have a nice day!");
+                    Console.WriteLine($"{Environment.NewLine} Press any key to exit...");
+                    Console.ReadKey(true);
+
+                }
+
+
+            }
 
 
             object[] userInput = { heroesOfEarthTwo, multiverseHeroes };
