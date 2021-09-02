@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace HelloEarthTwo
 {
@@ -17,14 +19,11 @@ namespace HelloEarthTwo
         //Method Converts captured hero to Json  and writes to hero.json file
         public void ConvertHeroInput(object heroData)
         {
-
             string output = JsonConvert.SerializeObject(heroData); // converting hero Object to json  
             Console.WriteLine(output);
             var earth2FilePath = @"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\earthTwoHeroes.json";
 
-            // write json to .json file
-            File.WriteAllText(earth2FilePath, output); // Writing our hero information to hero.json file
-
+            File.WriteAllText(earth2FilePath, output);// Writing our hero information to hero.json file
         }
         public void ConvertMultiverseHeroInput(object heroData)
         {
