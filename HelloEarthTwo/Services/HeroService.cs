@@ -102,7 +102,7 @@ namespace HelloEarthTwo
             void sortHeroesByWorld()
             {
 
-                bool sendToEarth2()
+                bool checkIfEarth2()
                 {
 
                     var worldCompare = homeWorld.HomeWorld == "Earth-2" || homeWorld.HomeWorld == "earth-2"
@@ -111,7 +111,7 @@ namespace HelloEarthTwo
                     return worldCompare;
                 }
 
-                bool sendToMultiverse()
+                bool checkIfMultiverse()
                 {
                     var worldCompare = multiverseHeroes.homeWorld != "Earth-2" || multiverseHeroes.homeWorld != "earth-2"
                     || multiverseHeroes.homeWorld != "earth 2" || multiverseHeroes.homeWorld != "earth two"
@@ -120,7 +120,7 @@ namespace HelloEarthTwo
 
                 }
                 //TODO: Edit sorting condition to allow diffrent spellings of earth-2 ie: earth-2, earth two EARTH TWO EARTH 2 etc etc 
-                if (sendToEarth2() == true)
+                if (checkIfEarth2() == true)
                 {
 
                     callHeroesList.ConvertHeroInput(heroesOfEarthTwo);// Provide an instance name 
@@ -136,7 +136,7 @@ namespace HelloEarthTwo
 
 
                 }
-                else if (sendToMultiverse() == true)
+                else if (checkIfMultiverse() == true)
                 {
 
                     callHeroesList.ConvertMultiverseHeroInput(multiverseHeroes);
