@@ -11,6 +11,7 @@ using System.Text.Json.Serialization;
 using System.IO;
 using System.Windows.Input;
 
+
 namespace HelloEarthTwo
 {
 
@@ -214,7 +215,9 @@ namespace HelloEarthTwo
             //TODO: Create method that allows user to edit typos
             void editTypo()
             {
-               
+                //TODO: Method should allow user to edit mistakes in all input fields bay pressing ctrl Z to go back or something similar 
+                // May have to save the state of the app and loop backwards over the saved state like rewinding a tape
+           
 
             }
             editTypo();
