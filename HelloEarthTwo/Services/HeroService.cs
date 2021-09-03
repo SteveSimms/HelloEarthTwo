@@ -9,6 +9,7 @@ using System.Data;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.IO;
+using System.Windows.Input;
 
 namespace HelloEarthTwo
 {
@@ -180,11 +181,11 @@ namespace HelloEarthTwo
             }
             else
             {
-                userInfoReadOut();
+                printUserInfoReadOut();
             }
 
             //TODO: ASK if the user would  like A read out of his info 
-            void userInfoReadOut()
+            void printUserInfoReadOut()
             {
                 Console.WriteLine($"{codeName.CodeName}, Would you like a read out of your information? ");
                 var userDecision = Console.ReadLine();
@@ -210,6 +211,13 @@ namespace HelloEarthTwo
 
             }
 
+            //TODO: Create method that allows user to edit typos
+            void editTypo()
+            {
+               
+
+            }
+            editTypo();
 
             object[] userInput = { heroesOfEarthTwo, multiverseHeroes };
             Console.WriteLine(userInput);
