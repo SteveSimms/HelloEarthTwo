@@ -9,6 +9,8 @@ using System.Data;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.IO;
+using System.Windows.Input;
+
 
 namespace HelloEarthTwo
 {
@@ -21,36 +23,26 @@ namespace HelloEarthTwo
         {
             //Instantiationg new Heroes class on ReadLine() method
             Console.WriteLine($"Whats your code name? ");
-
-            var codeName = new Heroes();
-            codeName.CodeName = Console.ReadLine();
+            var superHero = new Heroes();
+            superHero.CodeName = Console.ReadLine();
 
             Console.WriteLine($"Whats your powers? ");
-            var powers = new Heroes();
-            powers.Powers = Console.ReadLine();
+            superHero.Powers = Console.ReadLine();
 
             Console.WriteLine($"Whats your secret identity? ");
-
-            var secretId = new Heroes();
-            secretId.SecretId = Console.ReadLine();
+            superHero.SecretId = Console.ReadLine();
 
 
             Console.WriteLine($"Whats your home world? ");
-            var homeWorld = new Heroes();
-
-            homeWorld.HomeWorld = Console.ReadLine(); //May have to write a if multiverse condition
+            superHero.HomeWorld = Console.ReadLine(); //May have to write a if multiverse condition
 
             Console.WriteLine("What is your team affiliation?");
-            var teamAffiliation = new HeroesList();
-
-            teamAffiliation.TeamAffiliation = Console.ReadLine();
+            superHero.TeamAffiliation = Console.ReadLine();
 
             Console.WriteLine("Are You to the best of your knowledge a clone?");
-            var isClone = new Heroes();
+            superHero.IsClone = Console.ReadLine();
 
-            isClone.IsClone = Console.ReadLine();
-
-            Console.WriteLine($"{codeName}, {powers} , {secretId}, home world {homeWorld} clone status:{isClone}");
+            Console.WriteLine($"Name: {superHero.CodeName}, Powers: {superHero.Powers} ,Secret Identity {superHero.SecretId}, home world: {superHero.HomeWorld} clone status:{superHero.IsClone}");
 
             Console.WriteLine("Would you like to add more heroes?");
             Console.WriteLine("Enter Yes or Y to add another Hero");
@@ -62,37 +54,13 @@ namespace HelloEarthTwo
 
 
 
-            var heroesOfEarthTwo = new  //Think about Refactoring to a List<object>
-            {
-                codeName = codeName.CodeName,
-                powers = powers.Powers,
-                secretId = secretId.SecretId,
-                homeWorld = homeWorld.HomeWorld,
-                teamAffiliation = teamAffiliation.TeamAffiliation,
-                isClone = isClone.IsClone
-
-
-
-            };
-
-
-            var multiverseHeroes = new //Think about abstracting the hero objects into its own class
-            {
-                codeName = codeName.CodeName,
-                powers = powers.Powers,
-                secretId = secretId.SecretId,
-                homeWorld = homeWorld.HomeWorld,
-                teamAffiliation = teamAffiliation.TeamAffiliation,
-                isClone = isClone.IsClone
-
-            };
             //Creating an instance of our Heroes class so that I can use the HeroData List<object> to store our HeroesData
-            Heroes heroData = new Heroes();
-            heroData.HeroData.Add(heroesOfEarthTwo); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
-            heroData.HeroData.Add(multiverseHeroes);
+            Heroes heroData = new Heroes(); // Couldnt figure out a way to remove this  instance 
+            heroData.HeroData.Add(superHero); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
+            heroData.HeroData.Add(superHero);
 
 
-            //Heroes.HeroData.Add();
+           
 
             // TODO: FIgure out how to write a TEST SO I dont have to Keep inputing The required Fields 
 
@@ -105,17 +73,17 @@ namespace HelloEarthTwo
                 bool checkIfEarth2()
                 {
 
-                    var worldCompare = homeWorld.HomeWorld == "Earth-2" || homeWorld.HomeWorld == "earth-2"
-                        || homeWorld.HomeWorld == "earth 2" || homeWorld.HomeWorld == "earth two"
-                        || homeWorld.HomeWorld == "EARTH TWO" || homeWorld.HomeWorld == "EARTH 2";
+                    var worldCompare = superHero.HomeWorld == "Earth-2" || superHero.HomeWorld == "earth-2"
+                        || superHero.HomeWorld == "earth 2" || superHero.HomeWorld == "earth two"
+                        || superHero.HomeWorld == "EARTH TWO" || superHero.HomeWorld == "EARTH 2";
                     return worldCompare;
                 }
 
                 bool checkIfMultiverse()
                 {
-                    var worldCompare = multiverseHeroes.homeWorld != "Earth-2" || multiverseHeroes.homeWorld != "earth-2"
-                    || multiverseHeroes.homeWorld != "earth 2" || multiverseHeroes.homeWorld != "earth two"
-                    || multiverseHeroes.homeWorld != "EARTH TWO" || multiverseHeroes.homeWorld != "EARTH 2";
+                    var worldCompare = superHero.HomeWorld != "Earth-2" || superHero.HomeWorld != "earth-2"
+                    || superHero.HomeWorld != "earth 2" || superHero.HomeWorld != "earth two"
+                    || superHero.HomeWorld != "EARTH TWO" || superHero.HomeWorld != "EARTH 2";
                     return worldCompare;
 
                 }
@@ -123,23 +91,23 @@ namespace HelloEarthTwo
                 if (checkIfEarth2() == true)
                 {
 
-                    callHeroesList.ConvertHeroInput(heroesOfEarthTwo);// Provide an instance name 
+                    callHeroesList.ConvertHeroInput(superHero);// Provide an instance name 
                 }
-                else if (heroesOfEarthTwo.isClone == "true")
+                else if (superHero.IsClone == "true")
                 {
-                    callHeroesList.ConvertHeroInput(heroesOfEarthTwo);
+                    callHeroesList.ConvertHeroInput(superHero);
 
                 }
-                else if (multiverseHeroes.isClone == "true")
+                else if (superHero.IsClone == "true")
                 {
-                    callHeroesList.ConvertMultiverseHeroInput(multiverseHeroes);
+                    callHeroesList.ConvertMultiverseHeroInput(superHero);
 
 
                 }
                 else if (checkIfMultiverse() == true)
                 {
 
-                    callHeroesList.ConvertMultiverseHeroInput(multiverseHeroes);
+                    callHeroesList.ConvertMultiverseHeroInput(superHero);
                 }
 
                 else
@@ -180,16 +148,16 @@ namespace HelloEarthTwo
             }
             else
             {
-                userInfoReadOut();
+                printUserInfoReadOut();
             }
 
             //TODO: ASK if the user would  like A read out of his info 
-            void userInfoReadOut()
+            void printUserInfoReadOut()
             {
-                Console.WriteLine($"{codeName.CodeName}, Would you like a read out of your information? ");
+                Console.WriteLine($"{superHero.CodeName}, Would you like a read out of your information? ");
                 var userDecision = Console.ReadLine();
 
-                var formattedString = String.Format($"{ codeName.CodeName,-10}   {powers.Powers,-10} {secretId.SecretId,7}  {homeWorld.HomeWorld,11} {teamAffiliation.TeamAffiliation,13} {isClone.IsClone,15}   ");
+                var formattedString = String.Format($"{ superHero.CodeName,-10}   {superHero.Powers,-10} {superHero.SecretId,7}  {superHero.HomeWorld,11} {superHero.TeamAffiliation,13} {superHero.IsClone,15}   ");
 
                 if (userDecision == "Yes" || userDecision == "Y" || userDecision == "y")
                 {
@@ -201,7 +169,7 @@ namespace HelloEarthTwo
                 }
                 else
                 {
-                    Console.WriteLine($"Thank you for your service  {codeName.CodeName}. Have a nice day!");
+                    Console.WriteLine($"Thank you for your service  {superHero.CodeName}. Have a nice day!");
                     Console.WriteLine($"{Environment.NewLine} Press any key to exit...");
                     Console.ReadKey(true);
 
@@ -210,12 +178,21 @@ namespace HelloEarthTwo
 
             }
 
+            //TODO: Create method that allows user to edit typos
+            void editTypo()
+            {
+                //TODO: Method should allow user to edit mistakes in all input fields bay pressing ctrl Z to go back or something similar 
+                // May have to save the state of the app and loop backwards over the saved state like rewinding a tape
 
-            object[] userInput = { heroesOfEarthTwo, multiverseHeroes };
+
+            }
+            editTypo();
+
+            object[] userInput = { superHero, superHero };
             Console.WriteLine(userInput);
             //Console.WriteLine($"The value of heroData is {heroData}");
 
-            return heroesOfEarthTwo;
+            return superHero;
         }
 
 
