@@ -22,21 +22,21 @@ namespace HelloEarthTwo
         public void ConvertHeroInput(object superHero)
         {
             string output = JsonConvert.SerializeObject(superHero); // converting hero Object to json  
-            //Console.WriteLine(output);
+            Console.WriteLine(output);
             var earth2FilePath = @"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\earthTwoHeroes.json";
 
             File.WriteAllText(earth2FilePath, output);// Writing our hero information to hero.json file
-                
+
         }
         public void ConvertMultiverseHeroInput(object superHero)
         {
 
             string multiverseOutput = JsonConvert.SerializeObject(superHero);
-            //Console.WriteLine(multiverseOutput);
+            Console.WriteLine(multiverseOutput);
             var multiverseFilePath = @"C:\Users\simms\learn\projects\HelloEarthTwo\HelloEarthTwo\multiverseHeroes.json";
             // write json to .json file
             File.WriteAllText(multiverseFilePath, multiverseOutput); // Writing our hero information to hero.json file              
-           
+
 
         }
 

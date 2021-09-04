@@ -1,7 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Diagnostics;
+using System.Data;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.IO;
+using System.Windows.Input;
+using Humanizer;
+
 using log4net;
 using System.Reflection;
-
 namespace HelloEarthTwo
 {
     public class HeroService
@@ -37,7 +49,11 @@ namespace HelloEarthTwo
             Console.WriteLine("Are You to the best of your knowledge a clone?");
             superHero.IsClone = Console.ReadLine();
 
-            Console.WriteLine($"Name: {superHero.CodeName}, Powers: {superHero.Powers} ,Secret Identity {superHero.SecretId}, home world: {superHero.HomeWorld} clone status:{superHero.IsClone}");
+            superHero.TimeStamp = DateTime.UtcNow.ToString("dddd, MMMM dd  yyyy");
+            //Heroes timeStamp = DateTime.UtcNow.Humanize();
+
+
+            Console.WriteLine($"Name: {superHero.CodeName}, Powers: {superHero.Powers} ,Secret Identity {superHero.SecretId}, home world: {superHero.HomeWorld} clone status:{superHero.IsClone} at {superHero.TimeStamp}");
 
             Console.WriteLine("Would you like to add more heroes?");
             Console.WriteLine("Enter Yes or Y to add another Hero");
