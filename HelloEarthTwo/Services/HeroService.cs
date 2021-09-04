@@ -10,7 +10,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.IO;
 using System.Windows.Input;
-
+using Humanizer;
 
 namespace HelloEarthTwo
 {
@@ -42,7 +42,11 @@ namespace HelloEarthTwo
             Console.WriteLine("Are You to the best of your knowledge a clone?");
             superHero.IsClone = Console.ReadLine();
 
-            Console.WriteLine($"Name: {superHero.CodeName}, Powers: {superHero.Powers} ,Secret Identity {superHero.SecretId}, home world: {superHero.HomeWorld} clone status:{superHero.IsClone}");
+            superHero.TimeStamp = DateTime.UtcNow.ToString("dddd, MMMM dd  yyyy");
+            //Heroes timeStamp = DateTime.UtcNow.Humanize();
+
+
+            Console.WriteLine($"Name: {superHero.CodeName}, Powers: {superHero.Powers} ,Secret Identity {superHero.SecretId}, home world: {superHero.HomeWorld} clone status:{superHero.IsClone} at {superHero.TimeStamp}");
 
             Console.WriteLine("Would you like to add more heroes?");
             Console.WriteLine("Enter Yes or Y to add another Hero");
@@ -60,7 +64,7 @@ namespace HelloEarthTwo
             heroData.HeroData.Add(superHero);
 
 
-           
+
 
             // TODO: FIgure out how to write a TEST SO I dont have to Keep inputing The required Fields 
 
