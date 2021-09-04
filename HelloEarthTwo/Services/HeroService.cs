@@ -1,30 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using System.Diagnostics;
-using System.Data;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.IO;
-using System.Windows.Input;
-
+using log4net;
+using System.Reflection;
 
 namespace HelloEarthTwo
 {
-
     public class HeroService
     {
+        //  a separate instance of logger for HeroService class
+        private static readonly ILog logger = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         //Method captures userInput and stores it into an Object 
         public object CaptureUserInput()
         {
+            logger.Info($"Here we are inside of {GetType().Name}. Let's make some heroes...");
             //Instantiationg new Heroes class on ReadLine() method
             Console.WriteLine($"Whats your code name? ");
             var superHero = new Heroes();
             superHero.CodeName = Console.ReadLine();
+
+            //  TODO: add some log messages to tell what happened every time user enters a value
+            //  for example you can log out what they entered for superHero.CodeName with a nice message
 
             Console.WriteLine($"Whats your powers? ");
             superHero.Powers = Console.ReadLine();
@@ -60,7 +55,7 @@ namespace HelloEarthTwo
             heroData.HeroData.Add(superHero);
 
 
-           
+
 
             // TODO: FIgure out how to write a TEST SO I dont have to Keep inputing The required Fields 
 
