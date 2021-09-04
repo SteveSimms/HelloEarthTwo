@@ -24,34 +24,41 @@ namespace HelloEarthTwo
         //Method captures userInput and stores it into an Object 
         public object CaptureUserInput()
         {
-            logger.Info($"Here we are inside of {GetType().Name}. Let's make some heroes...");
+            logger.Info($"Here we are inside of {GetType().FullName}. Let's make some heroes...");
             //Instantiationg new Heroes class on ReadLine() method
             Console.WriteLine($"Whats your code name? ");
             var superHero = new Heroes();
             superHero.CodeName = Console.ReadLine();
+            logger.Info(message: $"The Value of superHero.CodeName is  { superHero.CodeName} and the Type is: {superHero.CodeName.GetType().FullName}"); // not sure if we need the message param but am curious to see if the messages map to the message object
 
             //  TODO: add some log messages to tell what happened every time user enters a value
             //  for example you can log out what they entered for superHero.CodeName with a nice message
 
             Console.WriteLine($"Whats your powers? ");
             superHero.Powers = Console.ReadLine();
+            logger.Info(message: $"The Value of superHero.Powers is  {superHero.Powers} and the Type is: { superHero.Powers.GetType().FullName}");
+
+
 
             Console.WriteLine($"Whats your secret identity? ");
             superHero.SecretId = Console.ReadLine();
-
+            logger.Info(message: $"The Value of superHero.SecretId {superHero.SecretId} and the Type is {superHero.SecretId.GetType().FullName}");
 
             Console.WriteLine($"Whats your home world? ");
             superHero.HomeWorld = Console.ReadLine(); //May have to write a if multiverse condition
+            logger.Info(message: $"The Value of superHero.HomeWorld {superHero.HomeWorld} and the Type is {superHero.HomeWorld.GetType().FullName}");
 
             Console.WriteLine("What is your team affiliation?");
             superHero.TeamAffiliation = Console.ReadLine();
+            logger.Info(message: $"The Value of superHero.TeamAffiliation {superHero.TeamAffiliation} and the Type is {superHero.TeamAffiliation.GetType().FullName}");
 
             Console.WriteLine("Are You to the best of your knowledge a clone?");
             superHero.IsClone = Console.ReadLine();
+            logger.Info(message: $"The Value of superHero.IsClone {superHero.IsClone} and the Type is {superHero.IsClone.GetType().FullName}");
 
             superHero.TimeStamp = DateTime.Now.ToString("dddd, MMMM dd  yyyy h:mm tt");
             //Heroes timeStamp = DateTime.UtcNow.Humanize();
-
+            logger.Info(message: $"The Value of superHero.TimeStamp {superHero.TimeStamp} and the Type is {superHero.TimeStamp.GetType().FullName}");
 
             Console.WriteLine($"Name: {superHero.CodeName}, Powers: {superHero.Powers} ,Secret Identity {superHero.SecretId}, home world: {superHero.HomeWorld} clone status: {superHero.IsClone} at {superHero.TimeStamp}");
 
@@ -70,7 +77,7 @@ namespace HelloEarthTwo
             heroData.HeroData.Add(superHero); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
             heroData.HeroData.Add(superHero);
 
-       
+
 
 
             // TODO: FIgure out how to write a TEST SO I dont have to Keep inputing The required Fields 
@@ -98,7 +105,7 @@ namespace HelloEarthTwo
                     return worldCompare;
 
                 }
-                //TODO: Edit sorting condition to allow diffrent spellings of earth-2 ie: earth-2, earth two EARTH TWO EARTH 2 etc etc 
+
                 if (checkIfEarth2() == true)
                 {
 
@@ -162,7 +169,7 @@ namespace HelloEarthTwo
                 printUserInfoReadOut();
             }
 
-            //TODO: ASK if the user would  like A read out of his info 
+            // ASK if the user would  like A read out of his info 
             void printUserInfoReadOut()
             {
                 Console.WriteLine($"{superHero.CodeName}, Would you like a read out of your information? ");
@@ -201,7 +208,7 @@ namespace HelloEarthTwo
 
             object[] userInput = { superHero, superHero };
             Console.WriteLine(userInput);
-         
+
             Console.WriteLine($"The value of heroData is {heroData.HeroData}");
 
             return superHero;
