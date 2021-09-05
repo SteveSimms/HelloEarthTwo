@@ -38,7 +38,7 @@ namespace HelloEarthTwo
             superHero.Powers = Console.ReadLine();
             logger.Info(message: $"The Value of superHero.Powers is:  {superHero.Powers} and the Type is: { superHero.Powers.GetType().FullName}");
 
-            
+
 
             Console.WriteLine($"Whats your secret identity? ");
             superHero.SecretId = Console.ReadLine();
@@ -65,7 +65,7 @@ namespace HelloEarthTwo
             Console.WriteLine("Would you like to add more heroes?");
             Console.WriteLine("Enter Yes or Y to add another Hero");
             var userChoice = Console.ReadLine();
-
+            printUserInfoReadOut();
 
 
 
@@ -139,36 +139,6 @@ namespace HelloEarthTwo
 
             sortHeroesByWorld();
 
-
-
-
-
-            //Condition allows the user to add additional heroes Options move conditional to the Main method?
-            if (userChoice == "Yes")
-            {
-                return CaptureUserInput();
-
-            }
-            else if (userChoice == "yes")
-            {
-                return CaptureUserInput();
-
-            }
-            else if (userChoice == "y")
-            {
-                return CaptureUserInput();
-
-            }
-            else if (userChoice == "Affirmative")
-            {
-
-                return CaptureUserInput();
-            }
-            else
-            {
-                printUserInfoReadOut();
-            }
-
             // ASK if the user would  like A read out of his info 
             void printUserInfoReadOut()
             {
@@ -195,6 +165,35 @@ namespace HelloEarthTwo
 
 
             }
+
+            //Condition allows the user to add additional heroes Options 
+            if (userChoice == "Yes")
+            {
+
+                return CaptureUserInput();
+
+            }
+            else if (userChoice == "yes")
+            {
+                return CaptureUserInput();
+
+            }
+            else if (userChoice == "y")
+            {
+                return CaptureUserInput();
+
+            }
+            else if (userChoice == "Affirmative")
+            {
+
+                return CaptureUserInput();
+            }
+            else
+            {
+                Console.WriteLine($"Okay, Safe journeys....{superHero.CodeName}");
+            }
+
+
 
             //TODO: Create method that allows user to edit typos
             void editTypo()
