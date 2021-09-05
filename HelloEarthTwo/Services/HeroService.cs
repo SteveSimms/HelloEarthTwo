@@ -77,7 +77,7 @@ namespace HelloEarthTwo
             heroData.HeroData.Add(superHero); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
             heroData.HeroData.Add(superHero);
 
-
+            logger.Info(message: $"The Value of superHero.HeroData is:  {heroData.HeroData} and the Type is: { heroData.HeroData.GetType().FullName}");
 
 
             // TODO: FIgure out how to write a TEST SO I dont have to Keep inputing The required Fields 
@@ -209,6 +209,7 @@ namespace HelloEarthTwo
             Console.WriteLine(userInput);
 
             Console.WriteLine($"The value of heroData is {heroData.HeroData}");
+            //Console.WriteLine($"The Length of HeroData ia " { heroData.HeroData.Last<object>});
 
             return superHero;
         }
