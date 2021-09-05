@@ -38,7 +38,7 @@ namespace HelloEarthTwo
             superHero.Powers = Console.ReadLine();
             logger.Info(message: $"The Value of superHero.Powers is:  {superHero.Powers} and the Type is: { superHero.Powers.GetType().FullName}");
 
-
+            
 
             Console.WriteLine($"Whats your secret identity? ");
             superHero.SecretId = Console.ReadLine();
