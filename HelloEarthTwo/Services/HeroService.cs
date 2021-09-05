@@ -29,36 +29,36 @@ namespace HelloEarthTwo
             Console.WriteLine($"Whats your code name? ");
             var superHero = new Heroes();
             superHero.CodeName = Console.ReadLine();
-            logger.Info(message: $"The Value of superHero.CodeName is  { superHero.CodeName} and the Type is: {superHero.CodeName.GetType().FullName}"); // not sure if we need the message param but am curious to see if the messages map to the message object
+            logger.Info(message: $"The Value of superHero.CodeName is:  { superHero.CodeName} and the Type is: {superHero.CodeName.GetType().FullName}"); // not sure if we need the message param but am curious to see if the messages map to the message object
 
             //  TODO: add some log messages to tell what happened every time user enters a value
             //  for example you can log out what they entered for superHero.CodeName with a nice message
-
+            // TODO: color code the output mapped to certain properties ie blue for earth
             Console.WriteLine($"Whats your powers? ");
             superHero.Powers = Console.ReadLine();
-            logger.Info(message: $"The Value of superHero.Powers is  {superHero.Powers} and the Type is: { superHero.Powers.GetType().FullName}");
+            logger.Info(message: $"The Value of superHero.Powers is:  {superHero.Powers} and the Type is: { superHero.Powers.GetType().FullName}");
 
 
 
             Console.WriteLine($"Whats your secret identity? ");
             superHero.SecretId = Console.ReadLine();
-            logger.Info(message: $"The Value of superHero.SecretId {superHero.SecretId} and the Type is {superHero.SecretId.GetType().FullName}");
+            logger.Info(message: $"The Value of superHero.SecretId: {superHero.SecretId} and the Type is: {superHero.SecretId.GetType().FullName}");
 
             Console.WriteLine($"Whats your home world? ");
             superHero.HomeWorld = Console.ReadLine(); //May have to write a if multiverse condition
-            logger.Info(message: $"The Value of superHero.HomeWorld {superHero.HomeWorld} and the Type is {superHero.HomeWorld.GetType().FullName}");
+            logger.Info(message: $"The Value of superHero.HomeWorld: {superHero.HomeWorld} and the Type is: {superHero.HomeWorld.GetType().FullName}");
 
             Console.WriteLine("What is your team affiliation?");
             superHero.TeamAffiliation = Console.ReadLine();
-            logger.Info(message: $"The Value of superHero.TeamAffiliation {superHero.TeamAffiliation} and the Type is {superHero.TeamAffiliation.GetType().FullName}");
+            logger.Info(message: $"The Value of superHero.TeamAffiliation: {superHero.TeamAffiliation} and the Type is: {superHero.TeamAffiliation.GetType().FullName}");
 
             Console.WriteLine("Are You to the best of your knowledge a clone?");
             superHero.IsClone = Console.ReadLine();
-            logger.Info(message: $"The Value of superHero.IsClone {superHero.IsClone} and the Type is {superHero.IsClone.GetType().FullName}");
+            logger.Info(message: $"The Value of superHero.IsClone: {superHero.IsClone} and the Type is {superHero.IsClone.GetType().FullName}");
 
             superHero.TimeStamp = DateTime.Now.ToString("dddd, MMMM dd  yyyy h:mm tt");
             //Heroes timeStamp = DateTime.UtcNow.Humanize();
-            logger.Info(message: $"The Value of superHero.TimeStamp {superHero.TimeStamp} and the Type is {superHero.TimeStamp.GetType().FullName}");
+            logger.Info(message: $"The Value of superHero.TimeStamp: {superHero.TimeStamp} and the Type is: {superHero.TimeStamp.GetType().FullName}");
 
             Console.WriteLine($"Name: {superHero.CodeName}, Powers: {superHero.Powers} ,Secret Identity {superHero.SecretId}, home world: {superHero.HomeWorld} clone status: {superHero.IsClone} at {superHero.TimeStamp}");
 
