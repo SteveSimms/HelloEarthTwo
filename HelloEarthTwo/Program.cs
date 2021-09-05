@@ -41,6 +41,7 @@ namespace HelloEarthTwo
             logger.Info("Hello logging world!");
             logger.Error("Error!");
             logger.Warn("Warn!");
+            logger.Debug($"Lets Debug {logRepository}");
 
             var heroFile = new HeroService();
             heroFile.CaptureUserInput();
