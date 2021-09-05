@@ -33,6 +33,8 @@ namespace HelloEarthTwo
         static void Main(string[] args)
         {
 
+
+            #region Log to file
             var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
             XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
 
@@ -43,13 +45,16 @@ namespace HelloEarthTwo
             logger.Warn("Warn!");
             logger.Debug($"Lets Debug {logRepository}");
 
+
+            XmlConfigurator.Configure(new FileInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory + "ConfigFile\\Log4NetToFile.config")));
+            var log2File = LogManager.GetLogger(typeof(Program));
+            //Console.ReadLine(); if left in the program wont begin until a key is pressed
+            #endregion
             var heroFile = new HeroService();
             heroFile.CaptureUserInput();
-
-
             //Enhance the application to prompt the user for their name and display it along with the date and time.
-            var CurrentDate = DateTime.Now;
-            //Console.WriteLine($"{Environment.NewLine} Salam, {name} on {CurrentDate:d} at {CurrentDate:t}!");
+            //var CurrentDate = DateTime.Now;
+            //Console.WriteLine($"{Environment.NewLine} Salam, Steve on {CurrentDate:d} at {CurrentDate:t}!");
 
         }
 
