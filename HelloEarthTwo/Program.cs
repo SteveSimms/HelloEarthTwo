@@ -32,8 +32,9 @@ namespace HelloEarthTwo
 
         static void Main(string[] args)
         {
-
-
+            // Currently not working
+            Console.BackgroundColor = ConsoleColor.DarkMagenta;
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             #region Log to file
             var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
             XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
@@ -52,16 +53,29 @@ namespace HelloEarthTwo
             #endregion
             var heroFile = new HeroService();
             heroFile.CaptureUserInput();
+
             //Enhance the application to prompt the user for their name and display it along with the date and time.
             //var CurrentDate = DateTime.Now;
             //Console.WriteLine($"{Environment.NewLine} Salam, Steve on {CurrentDate:d} at {CurrentDate:t}!");
 
-        }
 
+
+
+        }
 
 
     }
 
 
+
+
+
+
+
+
+
 }
+
+
+
 

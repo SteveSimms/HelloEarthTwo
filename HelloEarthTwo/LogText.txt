@@ -1,1 +1,203 @@
-﻿
+﻿2021-09-06 10:46:00,732 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 10:46:01,002 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 10:46:01,086 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 10:46:01,096 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 10:46:11,594 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  The Hulk and the Type is: System.String
+2021-09-06 10:46:14,154 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Gamma and the Type is: System.String
+2021-09-06 10:46:16,698 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Bruce and the Type is: System.String
+2021-09-06 10:46:21,948 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-06 10:46:30,221 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avengers and the Type is: System.String
+2021-09-06 10:46:32,514 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: no and the Type is System.String
+2021-09-06 10:46:32,539 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Monday, September 06  2021 10:46 AM and the Type is: System.String
+2021-09-06 10:46:35,932 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-06 10:46:36,711 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 10:46:42,878 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Ironman and the Type is: System.String
+2021-09-06 10:46:48,828 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Armor Tech and the Type is: System.String
+2021-09-06 10:46:55,252 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Tony Stark and the Type is: System.String
+2021-09-06 10:47:00,754 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-2 and the Type is: System.String
+2021-09-06 10:47:05,473 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avengers and the Type is: System.String
+2021-09-06 10:47:07,788 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: no and the Type is System.String
+2021-09-06 10:47:07,816 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Monday, September 06  2021 10:47 AM and the Type is: System.String
+2021-09-06 10:47:12,735 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-06 11:03:02,717 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 11:03:02,768 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 11:03:02,785 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 11:03:02,818 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 11:03:09,986 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Manifold and the Type is: System.String
+2021-09-06 11:03:26,995 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Teleportation and the Type is: System.String
+2021-09-06 11:03:33,473 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Eden Faris and the Type is: System.String
+2021-09-06 11:03:43,185 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-06 11:03:48,667 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avengers and the Type is: System.String
+2021-09-06 11:03:54,722 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
+2021-09-06 11:03:54,738 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Monday, September 06  2021 11:03 AM and the Type is: System.String
+2021-09-06 11:06:09,016 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 11:06:09,069 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 11:06:09,073 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 11:06:09,078 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 11:06:18,481 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Manifold and the Type is: System.String
+2021-09-06 11:06:23,581 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Teleportation and the Type is: System.String
+2021-09-06 11:06:26,007 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Eden and the Type is: System.String
+2021-09-06 11:06:30,859 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-06 11:06:34,483 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avenger and the Type is: System.String
+2021-09-06 11:06:39,553 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
+2021-09-06 11:06:39,573 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Monday, September 06  2021 11:06 AM and the Type is: System.String
+2021-09-06 11:08:12,142 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-06 11:08:12,380 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 11:08:18,746 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Ironman and the Type is: System.String
+2021-09-06 11:08:23,891 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Armor Tech and the Type is: System.String
+2021-09-06 11:08:30,193 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Tony Stark and the Type is: System.String
+2021-09-06 11:08:37,603 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-2 and the Type is: System.String
+2021-09-06 11:08:50,642 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avengers and the Type is: System.String
+2021-09-06 11:08:58,393 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
+2021-09-06 11:08:58,396 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Monday, September 06  2021 11:08 AM and the Type is: System.String
+2021-09-06 11:09:38,495 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-06 11:46:51,188 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 11:47:07,873 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 11:47:07,875 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 11:47:07,883 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 11:47:33,632 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 11:47:33,657 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 11:47:33,674 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 11:47:33,689 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 11:48:11,675 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 11:48:11,689 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 11:48:11,690 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 11:48:11,694 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 11:50:43,623 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 11:50:43,723 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 11:50:43,785 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 11:50:43,811 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 11:51:17,423 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 11:51:17,487 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 11:51:17,509 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 11:51:17,568 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 12:33:11,146 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 12:33:11,291 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 12:33:11,329 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 12:33:11,343 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 12:50:59,311 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 12:50:59,327 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 12:50:59,328 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 12:52:32,536 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 12:52:35,482 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:   and the Type is: System.String
+2021-09-06 12:52:44,060 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 12:52:44,121 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 12:52:44,136 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 12:52:49,828 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-06 13:28:11,337 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 13:28:11,383 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 13:28:11,393 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 13:29:01,329 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 13:29:01,357 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 13:29:01,358 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 13:41:10,089 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 13:41:10,118 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 13:41:10,122 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 13:41:35,198 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 13:41:35,253 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 13:41:35,262 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 14:02:14,389 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 14:02:14,418 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 14:02:14,442 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 14:05:46,066 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 14:05:46,106 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 14:05:46,111 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 14:07:08,275 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 14:07:08,356 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 14:07:08,369 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 14:07:23,111 [4] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  The amendment when ironman and the Type is: System.String
+2021-09-06 14:07:34,782 [9] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  baths and router more and the Type is: System.String
+2021-09-06 14:13:40,664 [12] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  at and the Type is: System.String
+2021-09-06 14:18:13,378 [8] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  11 and the Type is: System.String
+2021-09-06 14:20:55,094 [25] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  F and the Type is: System.String
+2021-09-06 14:21:17,187 [28] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Pena and the Type is: System.String
+2021-09-06 14:21:24,242 [31] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  to the and the Type is: System.String
+2021-09-06 14:47:59,809 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 14:47:59,839 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 14:47:59,846 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 14:48:11,145 [9] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  The new model and the Type is: System.String
+2021-09-06 14:51:34,577 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 14:51:34,601 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 14:51:34,603 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 14:51:42,411 [9] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  To known and the Type is: System.String
+2021-09-06 14:53:03,179 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 14:53:03,200 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 14:53:03,227 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 14:53:13,360 [10] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  The environment and and the Type is: System.String
+2021-09-06 15:04:12,389 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:04:12,407 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:04:12,408 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:04:22,688 [10] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  The modern Manhattan and the Type is: System.String
+2021-09-06 15:04:29,762 [8] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  the modern Manhattan, and the Type is: System.String
+2021-09-06 15:04:33,826 [6] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  ironman and the Type is: System.String
+2021-09-06 15:12:08,627 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:12:08,642 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:12:08,643 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:12:25,888 [9] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  The enrollment wire man and the Type is: System.String
+2021-09-06 15:12:28,162 [10] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  what your hours and the Type is: System.String
+2021-09-06 15:12:30,402 [9] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  or two homers and the Type is: System.String
+2021-09-06 15:12:32,651 [9] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  or through Vars and the Type is: System.String
+2021-09-06 15:13:20,461 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:13:20,483 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:13:20,503 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:13:34,823 [11] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  I meant no ironman and the Type is: System.String
+2021-09-06 15:14:00,114 [6] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  what your hours and the Type is: System.String
+2021-09-06 15:14:09,509 [6] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  or 2 hours and the Type is: System.String
+2021-09-06 15:14:15,057 [9] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  or 2 hours and the Type is: System.String
+2021-09-06 15:14:19,857 [11] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  or 2 hours and the Type is: System.String
+2021-09-06 15:21:48,899 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:21:48,972 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:21:48,979 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:22:00,586 [11] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Tonight and our men and the Type is: System.String
+2021-09-06 15:22:02,860 [9] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  what your hours and the Type is: System.String
+2021-09-06 15:22:05,563 [6] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  or two of how wrong and the Type is: System.String
+2021-09-06 15:22:38,869 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:22:38,938 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:22:38,964 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:22:53,915 [10] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Ironman twine and men and the Type is: System.String
+2021-09-06 15:22:56,135 [10] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  what your hours and the Type is: System.String
+2021-09-06 15:22:58,392 [10] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  or 2 hours and the Type is: System.String
+2021-09-06 15:23:00,975 [12] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  or a hostile and the Type is: System.String
+2021-09-06 15:24:14,481 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:24:14,505 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:24:14,532 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:24:26,185 [4] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Don't know iron men and the Type is: System.String
+2021-09-06 15:25:22,870 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:25:22,892 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:25:22,894 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:28:18,270 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:28:18,294 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:28:18,295 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:28:29,990 [11] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  The environment wire man and the Type is: System.String
+2021-09-06 15:28:50,100 [8] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  ironman and the Type is: System.String
+2021-09-06 15:34:42,546 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:34:42,584 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:34:42,587 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:34:53,377 [8] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  The Moon and we'll iron men and the Type is: System.String
+2021-09-06 15:39:19,991 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:39:20,064 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:39:20,082 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:39:34,913 [9] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  That and are met and and the Type is: System.String
+2021-09-06 15:40:49,892 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:40:49,911 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:40:49,912 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:44:46,408 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:44:46,438 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:44:46,470 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:45:21,128 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:45:21,199 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:45:21,214 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:47:48,091 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:47:48,115 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:47:48,150 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:47:59,098 [11] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  The meant watermen and the Type is: System.String
+2021-09-06 15:48:06,142 [8] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  were thrown and the Type is: System.String
+2021-09-06 15:48:49,852 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:48:49,877 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:48:49,878 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:49:01,020 [9] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  I'm not hire men and the Type is: System.String
+2021-09-06 15:49:01,025 [9] INFO HelloEarthTwo.HeroService - The Value of superHero.Powers is: I'm not hire men and the Type is: System.String
+2021-09-06 15:49:38,301 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-06 15:49:38,347 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-06 15:49:38,364 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-06 15:49:50,443 [11] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Don't why are men who and the Type is: System.String

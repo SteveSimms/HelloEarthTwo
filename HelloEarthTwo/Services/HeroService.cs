@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,8 @@ using System.Text.Json.Serialization;
 using System.IO;
 using System.Windows.Input;
 using Humanizer;
-
+using System.Speech.Recognition;
+using System.Speech.Synthesis;
 using log4net;
 using System.Reflection;
 namespace HelloEarthTwo
@@ -24,16 +26,157 @@ namespace HelloEarthTwo
         //Method captures userInput and stores it into an Object 
         public object CaptureUserInput()
         {
-            logger.Info($"Here we are inside of {GetType().FullName}. Let's make some heroes...");
-            //Instantiationg new Heroes class on ReadLine() method
-            Console.WriteLine($"Whats your code name? ");
             var superHero = new Heroes();
+            // Initialize a new instance of the SpeechSynthesizer.
+            using (SpeechSynthesizer synth = new SpeechSynthesizer())
+            {
+                // Configure the audio output.
+                synth.SetOutputToDefaultAudioDevice();
+
+                // Create A prompt from a string.
+                Console.WriteLine("Would you like to enable speech recognition?");
+                var enableSpeech = Console.ReadLine();
+
+                Prompt codeNamePrompt = new Prompt("What is your code name?");
+                Prompt powersPrompt = new Prompt($"Whats your powers? ");
+
+               
+            
+
+                var userDecision = (enableSpeech == "Yes" || enableSpeech == "Y" || enableSpeech == "y");
+
+
+                if (userDecision == true)
+                {
+
+                    synth.Speak(codeNamePrompt);
+
+                    SpeechRecInit();
+                }
+
+                if (userDecision == true)
+                {
+                    Console.WriteLine($"{superHero.CodeName} do you have powers?");
+                    var powersResponse = Console.ReadLine();
+                    synth.Speak(powersPrompt);
+                    SpeechRecInit();
+                }
+                //Speak the contents of the prompt synchronously.
+                synth.Speak(enableSpeech);
+
+
+
+
+                //if(powersPrompt != false)
+                //{
+
+                //}
+
+                ////TODO: if enableSpeech == yes then listen for response
+                //// Prompt event organization 
+                //// if codeNamePrompt == What is your code name? trigger speech Recognition event and assign properties 
+                ///
+                /// 
+                //// Create an in-process speech recognizer for the en-US locale. 
+                void SpeechRecInit()
+                {
+
+                    using (SpeechRecognitionEngine recognizer =
+                        new SpeechRecognitionEngine(
+                            new System.Globalization.CultureInfo("en-us")))
+                    {
+                        // Create and load a dictation grammar. 
+                        recognizer.LoadGrammar(new DictationGrammar());
+                        // Add a handler for the speech recognized event.
+                        recognizer.SpeechRecognized +=
+                            new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
+
+                        // Configure input to the speech recognizer.
+                        recognizer.SetInputToDefaultAudioDevice();
+                        // Start asynchronous, continuous speech recognition. 
+                        recognizer.RecognizeAsync(RecognizeMode.Multiple);
+                        // Keep the console window open. 
+                        while (true)
+                        {
+                            Console.ReadLine();
+                        }
+
+                    }
+                    // Handle the SpeechRecognized event. 
+                    void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+                    {
+
+                        if (superHero.CodeName == superHero.CodeName)
+                        {
+                            superHero.CodeName = e.Result.Text;
+                            //trigger speech Recognition event and assign properties
+                            logger.Info(message: $"The Value of superHero.CodeName is:  { superHero.CodeName} and the Type is: {superHero.CodeName.GetType().FullName}");
+                        }
+                        else if (superHero.Powers == superHero.Powers)
+                        {
+                            superHero.Powers = e.Result.Text;
+                            logger.Info(message: $"The Value of superHero.Powers is: {superHero.Powers} and the Type is: {superHero.Powers.GetType().FullName}");
+                        }
+
+
+
+                        Console.WriteLine("Recognized text: " + e.Result.Text);
+
+                    }
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to exit...");
+                    Console.ReadKey();
+
+                }
+
+                //using (SpeechRecognitionEngine recognizer =
+                //    new SpeechRecognitionEngine(
+                //        new System.Globalization.CultureInfo("en-us")))
+                //{
+                //    // Create and load a dictation grammar. 
+                //    recognizer.LoadGrammar(new DictationGrammar());
+                //    // Add a handler for the speech recognized event.
+                //    recognizer.SpeechRecognized +=
+                //        new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
+
+                //    // Configure input to the speech recognizer.
+                //    recognizer.SetInputToDefaultAudioDevice();
+                //    // Start asynchronous, continuous speech recognition. 
+                //    recognizer.RecognizeAsync(RecognizeMode.Multiple);
+                //    // Keep the console window open. 
+                //    while (true)
+                //    {
+                //        Console.ReadLine();
+                //    }
+
+                //}
+                //// Handle the SpeechRecognized event. 
+                //void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+                //{
+                //    superHero.CodeName = e.Result.Text;
+                //    Console.WriteLine("Recognized text: " + e.Result.Text);
+                //    logger.Info(message: $"The Value of superHero.CodeName is:  { superHero.CodeName} and the Type is: {superHero.CodeName.GetType().FullName}");
+                //}
+                //Console.WriteLine();
+                //Console.WriteLine("Press any key to exit...");
+                //Console.ReadKey();
+            }
+
+
+
+
+
+
+
+            logger.Info($"Here we are inside of {GetType().FullName}. Let's make some heroes...");
+            //Instantiationg new Heroes class on superHero instance
+            Console.WriteLine($"Whats your code name? ");
+            //var superHero = new Heroes();
             superHero.CodeName = Console.ReadLine();
             logger.Info(message: $"The Value of superHero.CodeName is:  { superHero.CodeName} and the Type is: {superHero.CodeName.GetType().FullName}"); // not sure if we need the message param but am curious to see if the messages map to the message object
 
-            //  TODO: add some log messages to tell what happened every time user enters a value
+            //  add some log messages to tell what happened every time user enters a value
             //  for example you can log out what they entered for superHero.CodeName with a nice message
-            // TODO: color code the output mapped to certain properties ie blue for earth
             Console.WriteLine($"Whats your powers? ");
             superHero.Powers = Console.ReadLine();
             logger.Info(message: $"The Value of superHero.Powers is:  {superHero.Powers} and the Type is: { superHero.Powers.GetType().FullName}");
@@ -67,8 +210,15 @@ namespace HelloEarthTwo
             var userChoice = Console.ReadLine();
             printUserInfoReadOut();
 
-
-
+            // TODO:
+            //Use  SpeechSynthesizer in conjunction with seech recognition
+            // Would you like Speech Recognition Enabled?
+            // If SpeechRecEnabled == true
+            // Figure out how to Get VoiceInput from the user
+            // else run the Console.ReadLine flow
+            //Store VoiceInput on corresponding superHero property ie: superHero.CodName the same way our console.readline program is working
+            // TODO: use Log4net to tell us whats going on with the capturedSpeech
+            // Exit speech recognition exit program with "End Program"
 
 
 
@@ -77,10 +227,15 @@ namespace HelloEarthTwo
             heroData.HeroData.Add(superHero); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
             heroData.HeroData.Add(superHero);
 
+            foreach (var hero in heroData.HeroData)
+            {
+                Console.WriteLine($"The value of heroData.HeroData{ hero}"); // the List is being overwritten by the next entry 
+            }
+
             logger.Info(message: $"The Value of superHero.HeroData is:  {heroData.HeroData} and the Type is: { heroData.HeroData.GetType().FullName}");
 
 
-            // TODO: FIgure out how to write a TEST SO I dont have to Keep inputing The required Fields 
+            // TODO: Figure out how to write a TEST SO I dont have to Keep inputing The required Fields 
 
             //Creating a new instance of The HeroesList class so I can use the methods of that class in this file
             HeroesList callHeroesList = new HeroesList();
