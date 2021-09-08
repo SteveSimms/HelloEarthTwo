@@ -16,6 +16,8 @@ using System.Speech.Recognition;
 using System.Speech.Synthesis;
 using log4net;
 using System.Reflection;
+using HelloEarthTwo.Models;
+
 namespace HelloEarthTwo
 {
     public class HeroService
@@ -28,139 +30,6 @@ namespace HelloEarthTwo
         {
             var superHero = new Heroes();
             // Initialize a new instance of the SpeechSynthesizer.
-            using (SpeechSynthesizer synth = new SpeechSynthesizer())
-            {
-                // Configure the audio output.
-                synth.SetOutputToDefaultAudioDevice();
-
-                // Create A prompt from a string.
-                Console.WriteLine("Would you like to enable speech recognition?");
-                var enableSpeech = Console.ReadLine();
-
-                Prompt codeNamePrompt = new Prompt("What is your code name?");
-                Prompt powersPrompt = new Prompt($"Whats your powers? ");
-
-               
-            
-
-                var userDecision = (enableSpeech == "Yes" || enableSpeech == "Y" || enableSpeech == "y");
-
-
-                if (userDecision == true)
-                {
-
-                    synth.Speak(codeNamePrompt);
-
-                    SpeechRecInit();
-                }
-
-                if (userDecision == true)
-                {
-                    Console.WriteLine($"{superHero.CodeName} do you have powers?");
-                    var powersResponse = Console.ReadLine();
-                    synth.Speak(powersPrompt);
-                    SpeechRecInit();
-                }
-                //Speak the contents of the prompt synchronously.
-                synth.Speak(enableSpeech);
-
-
-
-
-                //if(powersPrompt != false)
-                //{
-
-                //}
-
-                ////TODO: if enableSpeech == yes then listen for response
-                //// Prompt event organization 
-                //// if codeNamePrompt == What is your code name? trigger speech Recognition event and assign properties 
-                ///
-                /// 
-                //// Create an in-process speech recognizer for the en-US locale. 
-                void SpeechRecInit()
-                {
-
-                    using (SpeechRecognitionEngine recognizer =
-                        new SpeechRecognitionEngine(
-                            new System.Globalization.CultureInfo("en-us")))
-                    {
-                        // Create and load a dictation grammar. 
-                        recognizer.LoadGrammar(new DictationGrammar());
-                        // Add a handler for the speech recognized event.
-                        recognizer.SpeechRecognized +=
-                            new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
-
-                        // Configure input to the speech recognizer.
-                        recognizer.SetInputToDefaultAudioDevice();
-                        // Start asynchronous, continuous speech recognition. 
-                        recognizer.RecognizeAsync(RecognizeMode.Multiple);
-                        // Keep the console window open. 
-                        while (true)
-                        {
-                            Console.ReadLine();
-                        }
-
-                    }
-                    // Handle the SpeechRecognized event. 
-                    void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
-                    {
-
-                        if (superHero.CodeName == superHero.CodeName)
-                        {
-                            superHero.CodeName = e.Result.Text;
-                            //trigger speech Recognition event and assign properties
-                            logger.Info(message: $"The Value of superHero.CodeName is:  { superHero.CodeName} and the Type is: {superHero.CodeName.GetType().FullName}");
-                        }
-                        else if (superHero.Powers == superHero.Powers)
-                        {
-                            superHero.Powers = e.Result.Text;
-                            logger.Info(message: $"The Value of superHero.Powers is: {superHero.Powers} and the Type is: {superHero.Powers.GetType().FullName}");
-                        }
-
-
-
-                        Console.WriteLine("Recognized text: " + e.Result.Text);
-
-                    }
-                    Console.WriteLine();
-                    Console.WriteLine("Press any key to exit...");
-                    Console.ReadKey();
-
-                }
-
-                //using (SpeechRecognitionEngine recognizer =
-                //    new SpeechRecognitionEngine(
-                //        new System.Globalization.CultureInfo("en-us")))
-                //{
-                //    // Create and load a dictation grammar. 
-                //    recognizer.LoadGrammar(new DictationGrammar());
-                //    // Add a handler for the speech recognized event.
-                //    recognizer.SpeechRecognized +=
-                //        new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
-
-                //    // Configure input to the speech recognizer.
-                //    recognizer.SetInputToDefaultAudioDevice();
-                //    // Start asynchronous, continuous speech recognition. 
-                //    recognizer.RecognizeAsync(RecognizeMode.Multiple);
-                //    // Keep the console window open. 
-                //    while (true)
-                //    {
-                //        Console.ReadLine();
-                //    }
-
-                //}
-                //// Handle the SpeechRecognized event. 
-                //void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
-                //{
-                //    superHero.CodeName = e.Result.Text;
-                //    Console.WriteLine("Recognized text: " + e.Result.Text);
-                //    logger.Info(message: $"The Value of superHero.CodeName is:  { superHero.CodeName} and the Type is: {superHero.CodeName.GetType().FullName}");
-                //}
-                //Console.WriteLine();
-                //Console.WriteLine("Press any key to exit...");
-                //Console.ReadKey();
-            }
 
 
 
@@ -179,7 +48,7 @@ namespace HelloEarthTwo
             //  for example you can log out what they entered for superHero.CodeName with a nice message
             Console.WriteLine($"Whats your powers? ");
             superHero.Powers = Console.ReadLine();
-            logger.Info(message: $"The Value of superHero.Powers is:  {superHero.Powers} and the Type is: { superHero.Powers.GetType().FullName}");
+            logger.Debug(message: $"The Value of superHero.Powers is:  {superHero.Powers} and the Type is: { superHero.Powers.GetType().FullName}");
 
 
 
@@ -365,6 +234,23 @@ namespace HelloEarthTwo
 
             Console.WriteLine($"The value of heroData is {heroData.HeroData}");
             //Console.WriteLine($"The Length of HeroData ia " { heroData.HeroData.Last<object>});
+
+            //Insert Data to database using the SaveChanges method
+            //Create a new instance of DbContext
+            using (var db = new EFContext())
+            {
+                //Create a new instance of the Model/Domain class Heroes Not sure if I need to add a new instance or just use the superHero Instance MEthod is currently not working
+                Heroes heroes = new Heroes();
+                heroes.CodeName = superHero.CodeName;
+                heroes.Powers = superHero.Powers;
+                heroes.SecretId = superHero.SecretId;
+                heroes.HomeWorld = superHero.HomeWorld;
+                heroes.TeamAffiliation = superHero.TeamAffiliation;
+                heroes.TimeStamp = superHero.TimeStamp;
+                db.Add(heroes);
+                db.SaveChanges();
+
+            }
 
             return superHero;
         }
