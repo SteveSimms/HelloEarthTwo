@@ -476,3 +476,15 @@
 2021-09-08 14:47:25,433 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
 2021-09-08 14:47:25,474 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Wednesday, September 08  2021 2:47 PM and the Type is: System.String
 2021-09-08 14:47:29,976 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-08 14:50:45,781 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-08 14:50:45,989 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-08 14:50:46,104 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-08 14:50:46,184 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-08 14:51:37,351 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Iceman and the Type is: System.String
+2021-09-08 14:52:32,992 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Cryokinesis and the Type is: System.String
+2021-09-08 14:52:46,987 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Robert Louis Drake and the Type is: System.String
+2021-09-08 14:52:54,041 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-08 14:52:59,664 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: X-Men and the Type is: System.String
+2021-09-08 14:53:01,480 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: no and the Type is System.String
+2021-09-08 14:53:01,495 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Wednesday, September 08  2021 2:53 PM and the Type is: System.String
+2021-09-08 14:53:07,507 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
