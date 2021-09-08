@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +12,12 @@ using System.Text.Json.Serialization;
 using System.IO;
 using System.Windows.Input;
 using Humanizer;
-
+using System.Speech.Recognition;
+using System.Speech.Synthesis;
 using log4net;
 using System.Reflection;
+using HelloEarthTwo.Models;
+
 namespace HelloEarthTwo
 {
     public class HeroService
@@ -24,19 +28,27 @@ namespace HelloEarthTwo
         //Method captures userInput and stores it into an Object 
         public object CaptureUserInput()
         {
-            logger.Info($"Here we are inside of {GetType().FullName}. Let's make some heroes...");
-            //Instantiationg new Heroes class on ReadLine() method
-            Console.WriteLine($"Whats your code name? ");
             var superHero = new Heroes();
+            // Initialize a new instance of the SpeechSynthesizer.
+
+
+
+
+
+
+
+            logger.Info($"Here we are inside of {GetType().FullName}. Let's make some heroes...");
+            //Instantiationg new Heroes class on superHero instance
+            Console.WriteLine($"Whats your code name? ");
+            //var superHero = new Heroes();
             superHero.CodeName = Console.ReadLine();
             logger.Info(message: $"The Value of superHero.CodeName is:  { superHero.CodeName} and the Type is: {superHero.CodeName.GetType().FullName}"); // not sure if we need the message param but am curious to see if the messages map to the message object
 
-            //  TODO: add some log messages to tell what happened every time user enters a value
+            //  add some log messages to tell what happened every time user enters a value
             //  for example you can log out what they entered for superHero.CodeName with a nice message
-            // TODO: color code the output mapped to certain properties ie blue for earth
             Console.WriteLine($"Whats your powers? ");
             superHero.Powers = Console.ReadLine();
-            logger.Info(message: $"The Value of superHero.Powers is:  {superHero.Powers} and the Type is: { superHero.Powers.GetType().FullName}");
+            logger.Debug(message: $"The Value of superHero.Powers is:  {superHero.Powers} and the Type is: { superHero.Powers.GetType().FullName}");
 
 
 
@@ -68,19 +80,45 @@ namespace HelloEarthTwo
             printUserInfoReadOut();
 
 
+            // CREATE
+            //Insert Data to database using the SaveChanges method
+            //Create a new instance of DbContext
+            using (var db = new EFContext())
+            {
+                //Using our superHero instance of the Model/Domain class Heroes 
 
+                superHero.CodeName = superHero.CodeName;
+                superHero.Powers = superHero.Powers;
+                superHero.SecretId = superHero.SecretId;
+                superHero.HomeWorld = superHero.HomeWorld;
+                superHero.TeamAffiliation = superHero.TeamAffiliation;
+                superHero.TimeStamp = superHero.TimeStamp;
+                db.Add(superHero);
+                db.SaveChanges();
 
+            }
 
+            //READ
+
+            //UPDATE
+
+            //DELETE
 
             //Creating an instance of our Heroes class so that I can use the HeroData List<object> to store our HeroesData
             Heroes heroData = new Heroes(); // Couldnt figure out a way to remove this  instance 
             heroData.HeroData.Add(superHero); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
             heroData.HeroData.Add(superHero);
 
+
+            foreach (var hero in heroData.HeroData)
+            {
+                Console.WriteLine($"The value of heroData.HeroData{ hero}"); // the List is being overwritten by the next entry 
+            }
+
             logger.Info(message: $"The Value of superHero.HeroData is:  {heroData.HeroData} and the Type is: { heroData.HeroData.GetType().FullName}");
 
 
-            // TODO: FIgure out how to write a TEST SO I dont have to Keep inputing The required Fields 
+            // TODO: Figure out how to write a TEST SO I dont have to Keep inputing The required Fields 
 
             //Creating a new instance of The HeroesList class so I can use the methods of that class in this file
             HeroesList callHeroesList = new HeroesList();
@@ -210,6 +248,23 @@ namespace HelloEarthTwo
 
             Console.WriteLine($"The value of heroData is {heroData.HeroData}");
             //Console.WriteLine($"The Length of HeroData ia " { heroData.HeroData.Last<object>});
+
+            ////Insert Data to database using the SaveChanges method
+            ////Create a new instance of DbContext
+            //using (var db = new EFContext())
+            //{
+            //    //Create a new instance of the Model/Domain class Heroes Not sure if I need to add a new instance or just use the superHero Instance MEthod is currently not working
+            //    Heroes heroes = new Heroes();
+            //    heroes.CodeName = superHero.CodeName;
+            //    heroes.Powers = superHero.Powers;
+            //    heroes.SecretId = superHero.SecretId;
+            //    heroes.HomeWorld = superHero.HomeWorld;
+            //    heroes.TeamAffiliation = superHero.TeamAffiliation;
+            //    heroes.TimeStamp = superHero.TimeStamp;
+            //    db.Add(heroes);
+            //    db.SaveChanges();
+
+            //}
 
             return superHero;
         }
