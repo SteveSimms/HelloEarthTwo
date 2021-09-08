@@ -80,6 +80,11 @@ namespace HelloEarthTwo
             printUserInfoReadOut();
 
 
+            //TODO:Abstract CRUD functionality to its own class
+            //TODO: WIRE up CRUD interactivity with ADMIN roles for Batman, T'Challa, Xaivier, & IRONMAN 
+            //------------------------------------------------------------------------------------------
+            // CRUD ops below interacting with DB
+            //------------------------------------------------------------------------------------------
             //// CREATE
             static void insertSuperHero(Heroes superHero)
             {
@@ -142,7 +147,7 @@ namespace HelloEarthTwo
             {
                 using (var db = new EFContext())
                 {
-                    superHero = db.Heroes.Find(4);
+                    superHero = db.Heroes.Find(8);
                     db.Heroes.Remove(superHero);
                     db.SaveChanges();
 
@@ -150,6 +155,10 @@ namespace HelloEarthTwo
             }
 
             deleteSuperHero(superHero);
+            readSuperHero(superHero);
+            //------------------------------------------------------------------------------------------
+            // END OF CRUD OPS interacting with   DB
+            //------------------------------------------------------------------------------------------
             //Creating an instance of our Heroes class so that I can use the HeroData List<object> to store our HeroesData
             Heroes heroData = new Heroes(); // Couldnt figure out a way to remove this  instance 
             heroData.HeroData.Add(superHero); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
