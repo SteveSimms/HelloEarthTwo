@@ -104,7 +104,7 @@ namespace HelloEarthTwo
             insertSuperHero(superHero);
 
 
-            //READ
+            //READ USes The SELECT method
             static void readSuperHero(Heroes superHero)
             {
                 using (var db = new EFContext())
@@ -118,8 +118,23 @@ namespace HelloEarthTwo
                 }
             }
             readSuperHero(superHero);
-            //UPDATE
+            //UPDATE uses the FIND method 
+            static void updateSuperHero(Heroes superHero)
+            {
+                using (var db = new EFContext())
+                {
+                    superHero = db.Heroes.Find(3);
+                    superHero.CodeName = "Zatana";
+                    superHero.HomeWorld = "Earth";
+                    superHero.IsClone = "No";
+                    superHero.Powers = "Mastery of Magic";
+                    superHero.TeamAffiliation = "JLA";
+                    superHero.TimeStamp = superHero.TimeStamp;
+                    db.SaveChanges();
+                }
+            }
 
+            updateSuperHero(superHero);
             //DELETE
 
             //Creating an instance of our Heroes class so that I can use the HeroData List<object> to store our HeroesData
