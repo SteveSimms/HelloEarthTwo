@@ -407,3 +407,15 @@
 2021-09-08 12:45:52,453 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
 2021-09-08 12:45:52,463 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Wednesday, September 08  2021 12:45 PM and the Type is: System.String
 2021-09-08 12:45:56,218 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-08 13:43:07,091 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-08 13:43:07,175 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-08 13:43:07,212 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-08 13:43:07,266 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-08 13:43:13,985 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Wolverine and the Type is: System.String
+2021-09-08 13:43:25,344 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Healing Factor and the Type is: System.String
+2021-09-08 13:43:30,871 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Logan and the Type is: System.String
+2021-09-08 13:43:35,433 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-08 13:43:55,089 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: X-Men,Avengers,Weapons + and the Type is: System.String
+2021-09-08 13:43:57,578 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
+2021-09-08 13:43:57,607 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Wednesday, September 08  2021 1:43 PM and the Type is: System.String
+2021-09-08 13:44:03,161 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
