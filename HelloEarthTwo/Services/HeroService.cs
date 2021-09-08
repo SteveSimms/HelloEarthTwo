@@ -80,26 +80,44 @@ namespace HelloEarthTwo
             printUserInfoReadOut();
 
 
-            // CREATE
-            //Insert Data to database using the SaveChanges method
-            //Create a new instance of DbContext
-            using (var db = new EFContext())
+            //// CREATE
+            static void insertSuperHero(Heroes superHero)
             {
-                //Using our superHero instance of the Model/Domain class Heroes 
+                //Insert Data to database using the SaveChanges method
+                //Create a new instance of DbContext
+                using (var db = new EFContext())
+                {
+                    //Using our superHero instance of the Model/Domain class Heroes 
 
-                superHero.CodeName = superHero.CodeName;
-                superHero.Powers = superHero.Powers;
-                superHero.SecretId = superHero.SecretId;
-                superHero.HomeWorld = superHero.HomeWorld;
-                superHero.TeamAffiliation = superHero.TeamAffiliation;
-                superHero.TimeStamp = superHero.TimeStamp;
-                db.Add(superHero);
-                db.SaveChanges();
+                    superHero.CodeName = superHero.CodeName;
+                    superHero.Powers = superHero.Powers;
+                    superHero.SecretId = superHero.SecretId;
+                    superHero.HomeWorld = superHero.HomeWorld;
+                    superHero.TeamAffiliation = superHero.TeamAffiliation;
+                    superHero.TimeStamp = superHero.TimeStamp;
+                    db.Add(superHero);
+                    db.SaveChanges();
+
+                }
 
             }
+            insertSuperHero(superHero);
+
 
             //READ
+            static void readSuperHero(Heroes superHero)
+            {
+                using (var db = new EFContext())
+                {
+                    List<Heroes> heroes = db.Heroes.ToList();
+                    foreach (Heroes h in heroes)
+                    {
+                        Console.WriteLine("{0} {1}", h.Id, h.CodeName);
+                    }
 
+                }
+            }
+            readSuperHero(superHero);
             //UPDATE
 
             //DELETE
@@ -249,22 +267,6 @@ namespace HelloEarthTwo
             Console.WriteLine($"The value of heroData is {heroData.HeroData}");
             //Console.WriteLine($"The Length of HeroData ia " { heroData.HeroData.Last<object>});
 
-            ////Insert Data to database using the SaveChanges method
-            ////Create a new instance of DbContext
-            //using (var db = new EFContext())
-            //{
-            //    //Create a new instance of the Model/Domain class Heroes Not sure if I need to add a new instance or just use the superHero Instance MEthod is currently not working
-            //    Heroes heroes = new Heroes();
-            //    heroes.CodeName = superHero.CodeName;
-            //    heroes.Powers = superHero.Powers;
-            //    heroes.SecretId = superHero.SecretId;
-            //    heroes.HomeWorld = superHero.HomeWorld;
-            //    heroes.TeamAffiliation = superHero.TeamAffiliation;
-            //    heroes.TimeStamp = superHero.TimeStamp;
-            //    db.Add(heroes);
-            //    db.SaveChanges();
-
-            //}
 
             return superHero;
         }
