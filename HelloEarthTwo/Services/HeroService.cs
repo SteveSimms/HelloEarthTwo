@@ -79,22 +79,36 @@ namespace HelloEarthTwo
             var userChoice = Console.ReadLine();
             printUserInfoReadOut();
 
-            // TODO:
-            //Use  SpeechSynthesizer in conjunction with seech recognition
-            // Would you like Speech Recognition Enabled?
-            // If SpeechRecEnabled == true
-            // Figure out how to Get VoiceInput from the user
-            // else run the Console.ReadLine flow
-            //Store VoiceInput on corresponding superHero property ie: superHero.CodName the same way our console.readline program is working
-            // TODO: use Log4net to tell us whats going on with the capturedSpeech
-            // Exit speech recognition exit program with "End Program"
 
+            // CREATE
+            //Insert Data to database using the SaveChanges method
+            //Create a new instance of DbContext
+            using (var db = new EFContext())
+            {
+                //Using our superHero instance of the Model/Domain class Heroes 
 
+                superHero.CodeName = superHero.CodeName;
+                superHero.Powers = superHero.Powers;
+                superHero.SecretId = superHero.SecretId;
+                superHero.HomeWorld = superHero.HomeWorld;
+                superHero.TeamAffiliation = superHero.TeamAffiliation;
+                superHero.TimeStamp = superHero.TimeStamp;
+                db.Add(superHero);
+                db.SaveChanges();
+
+            }
+
+            //READ
+
+            //UPDATE
+
+            //DELETE
 
             //Creating an instance of our Heroes class so that I can use the HeroData List<object> to store our HeroesData
             Heroes heroData = new Heroes(); // Couldnt figure out a way to remove this  instance 
             heroData.HeroData.Add(superHero); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
             heroData.HeroData.Add(superHero);
+
 
             foreach (var hero in heroData.HeroData)
             {
@@ -235,22 +249,22 @@ namespace HelloEarthTwo
             Console.WriteLine($"The value of heroData is {heroData.HeroData}");
             //Console.WriteLine($"The Length of HeroData ia " { heroData.HeroData.Last<object>});
 
-            //Insert Data to database using the SaveChanges method
-            //Create a new instance of DbContext
-            using (var db = new EFContext())
-            {
-                //Create a new instance of the Model/Domain class Heroes Not sure if I need to add a new instance or just use the superHero Instance MEthod is currently not working
-                Heroes heroes = new Heroes();
-                heroes.CodeName = superHero.CodeName;
-                heroes.Powers = superHero.Powers;
-                heroes.SecretId = superHero.SecretId;
-                heroes.HomeWorld = superHero.HomeWorld;
-                heroes.TeamAffiliation = superHero.TeamAffiliation;
-                heroes.TimeStamp = superHero.TimeStamp;
-                db.Add(heroes);
-                db.SaveChanges();
+            ////Insert Data to database using the SaveChanges method
+            ////Create a new instance of DbContext
+            //using (var db = new EFContext())
+            //{
+            //    //Create a new instance of the Model/Domain class Heroes Not sure if I need to add a new instance or just use the superHero Instance MEthod is currently not working
+            //    Heroes heroes = new Heroes();
+            //    heroes.CodeName = superHero.CodeName;
+            //    heroes.Powers = superHero.Powers;
+            //    heroes.SecretId = superHero.SecretId;
+            //    heroes.HomeWorld = superHero.HomeWorld;
+            //    heroes.TeamAffiliation = superHero.TeamAffiliation;
+            //    heroes.TimeStamp = superHero.TimeStamp;
+            //    db.Add(heroes);
+            //    db.SaveChanges();
 
-            }
+            //}
 
             return superHero;
         }
