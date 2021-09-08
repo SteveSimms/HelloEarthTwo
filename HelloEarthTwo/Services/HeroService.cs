@@ -82,6 +82,7 @@ namespace HelloEarthTwo
 
             //TODO:Abstract CRUD functionality to its own class
             //TODO: WIRE up CRUD interactivity with ADMIN roles for Batman, T'Challa, Xaivier, & IRONMAN 
+            //TODO: Add logging to DB calls 
             //------------------------------------------------------------------------------------------
             // CRUD ops below interacting with DB
             //------------------------------------------------------------------------------------------
