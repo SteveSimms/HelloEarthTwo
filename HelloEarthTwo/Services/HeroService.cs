@@ -102,30 +102,22 @@ namespace HelloEarthTwo
 
             }
             insertSuperHero(superHero);
-            //static void insertSuperHero(object superHero)
-            //{
-            //    //Insert Data to database using the SaveChanges method
-            //    //Create a new instance of DbContext
-            //    using (var db = new EFContext())
-            //    {
-            //        //Using our superHero instance of the Model/Domain class Heroes 
-
-            //        superHero.CodeName = superHero.CodeName;
-            //        superHero.Powers = superHero.Powers;
-            //        superHero.SecretId = superHero.SecretId;
-            //        superHero.HomeWorld = superHero.HomeWorld;
-            //        superHero.TeamAffiliation = superHero.TeamAffiliation;
-            //        superHero.TimeStamp = superHero.TimeStamp;
-            //        db.Add(superHero);
-            //        db.SaveChanges();
-
-            //    }
-
-            //}
 
 
             //READ
+            static void readSuperHero(Heroes superHero)
+            {
+                using (var db = new EFContext())
+                {
+                    List<Heroes> heroes = db.Heroes.ToList();
+                    foreach (Heroes h in heroes)
+                    {
+                        Console.WriteLine("{0} {1}", h.Id, h.CodeName);
+                    }
 
+                }
+            }
+            readSuperHero(superHero);
             //UPDATE
 
             //DELETE
