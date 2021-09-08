@@ -135,8 +135,21 @@ namespace HelloEarthTwo
             }
 
             updateSuperHero(superHero);
-            //DELETE
 
+
+            //DELETE is done using The REMOVE method of the DbSet
+            static void deleteSuperHero(Heroes superHero)
+            {
+                using (var db = new EFContext())
+                {
+                    superHero = db.Heroes.Find(4);
+                    db.Heroes.Remove(superHero);
+                    db.SaveChanges();
+
+                }
+            }
+
+            deleteSuperHero(superHero);
             //Creating an instance of our Heroes class so that I can use the HeroData List<object> to store our HeroesData
             Heroes heroData = new Heroes(); // Couldnt figure out a way to remove this  instance 
             heroData.HeroData.Add(superHero); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
