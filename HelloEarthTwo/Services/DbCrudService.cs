@@ -23,7 +23,7 @@ namespace HelloEarthTwo.Services
         // CREATE
         //Insert Data to database using the SaveChanges method
         //Create a new instance of DbContext
-        public void insertSuperHero(Hero superHero)
+        public void InsertSuperHero(Hero superHero)
         {
             //Insert Data to database using the SaveChanges method
             //Create a new instance of DbContext
@@ -46,7 +46,7 @@ namespace HelloEarthTwo.Services
         }
 
         //READ Uses The SELECT method
-        public void readSuperHero(Hero superHero)
+        public void ReadSuperHero(Hero superHero)
         {
             using (var db = new EFContext())
             {
@@ -62,7 +62,7 @@ namespace HelloEarthTwo.Services
 
 
 
-        public void updateSuperHero(Hero superHero)
+        public void UpdateSuperHero(Hero superHero)
         {
             using (var db = new EFContext())
             {
@@ -81,7 +81,7 @@ namespace HelloEarthTwo.Services
 
         //DELETE is done using The REMOVE method of the DbSet
         //TODO: Write some logic that deletes when a certain condition is met 
-        public void deleteSuperHero(Hero superHero)
+        public void DeleteSuperHero(Hero superHero)
         {
             using (var db = new EFContext())
             {
@@ -96,7 +96,7 @@ namespace HelloEarthTwo.Services
 
 
         //Delete duplicate Heroes 
-        public void deleteDuplicateHero(Hero superHero)
+        public void DeleteDuplicateHero(Hero superHero)
         {
             using (var db = new EFContext())
             {
