@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,15 +73,15 @@ namespace HelloEarthTwo
             Console.WriteLine("Would you like to add more heroes?");
             Console.WriteLine("Enter Yes or Y to add another Hero");
             var userChoice = Console.ReadLine();
-            printUserInfoReadOut();
+            PrintUserInfoReadOut();
 
             DbCrudService _dbCRUD = new DbCrudService();
 
-            _dbCRUD.insertSuperHero(superHero);
-            _dbCRUD.readSuperHero(superHero);
-            _dbCRUD.updateSuperHero(superHero);
-            _dbCRUD.deleteSuperHero(superHero); // TODO: wire this call to control flow of app based on user permissions
-            _dbCRUD.deleteSuperHero(superHero);
+            _dbCRUD.InsertSuperHero(superHero);
+            _dbCRUD.ReadSuperHero(superHero);
+            _dbCRUD.UpdateSuperHero(superHero);
+            _dbCRUD.DeleteSuperHero(superHero); // TODO: wire this call to control flow of app based on user permissions
+            _dbCRUD.DeleteDuplicateHero(superHero);
 
             //Creating an instance of our Heroes class so that I can use the HeroData List<object> to store our HeroesData
             Hero heroData = new Hero(); // Couldnt figure out a way to remove this  instance 
@@ -101,10 +102,10 @@ namespace HelloEarthTwo
             //Creating a new instance of The HeroesList class so I can use the methods of that class in this file
             HeroesList callHeroesList = new HeroesList();
 
-            void sortHeroesByWorld()
+            void SortHeroesByWorld()
             {
 
-                bool checkIfEarth2()
+                bool CheckIfEarth2()
                 {
 
                     var worldCompare = superHero.HomeWorld == "Earth-2" || superHero.HomeWorld == "earth-2"
@@ -113,7 +114,7 @@ namespace HelloEarthTwo
                     return worldCompare;
                 }
 
-                bool checkIfMultiverse()
+                bool CheckIfMultiverse()
                 {
                     var worldCompare = superHero.HomeWorld != "Earth-2" || superHero.HomeWorld != "earth-2"
                     || superHero.HomeWorld != "earth 2" || superHero.HomeWorld != "earth two"
@@ -122,7 +123,7 @@ namespace HelloEarthTwo
 
                 }
 
-                if (checkIfEarth2() == true)
+                if (CheckIfEarth2() == true)
                 {
 
                     callHeroesList.ConvertHeroInput(superHero);// Provide an instance name 
@@ -138,7 +139,7 @@ namespace HelloEarthTwo
 
 
                 }
-                else if (checkIfMultiverse() == true)
+                else if (CheckIfMultiverse() == true)
                 {
 
                     callHeroesList.ConvertMultiverseHeroInput(superHero);
@@ -153,10 +154,10 @@ namespace HelloEarthTwo
 
 
 
-            sortHeroesByWorld();
+            SortHeroesByWorld();
 
             // ASK if the user would  like A read out of his info 
-            void printUserInfoReadOut()
+            void PrintUserInfoReadOut()
             {
                 Console.WriteLine($"{superHero.CodeName}, Would you like a read out of your information? ");
                 var userDecision = Console.ReadLine();
@@ -212,14 +213,14 @@ namespace HelloEarthTwo
 
 
             //TODO: Create method that allows user to edit typos
-            void editTypo()
+            void EditTypo()
             {
                 //TODO: Method should allow user to edit mistakes in all input fields bay pressing ctrl Z to go back or something similar 
                 // May have to save the state of the app and loop backwards over the saved state like rewinding a tape
 
 
             }
-            editTypo();
+            EditTypo();
 
             object[] userInput = { superHero, superHero };
             Console.WriteLine(userInput);
