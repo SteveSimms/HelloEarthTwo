@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +17,7 @@ using log4net;
 using System.Reflection;
 using HelloEarthTwo.Models;
 using System.Text.RegularExpressions;
+using HelloEarthTwo.Services;
 
 namespace HelloEarthTwo
 {
@@ -29,7 +29,7 @@ namespace HelloEarthTwo
         //Method captures userInput and stores it into an Object 
         public object CaptureUserInput()
         {
-            var superHero = new Heroes();
+            var superHero = new Hero();
             // Initialize a new instance of the SpeechSynthesizer.
 
             logger.Info($"Here we are inside of {GetType().FullName}. Let's make some heroes...");
@@ -74,126 +74,24 @@ namespace HelloEarthTwo
             var userChoice = Console.ReadLine();
             printUserInfoReadOut();
 
+            DbCrudService _dbCRUD = new DbCrudService();
 
-            //TODO:Abstract CRUD functionality to its own class
-            //TODO: WIRE up CRUD interactivity with ADMIN roles for Batman, T'Challa, Xaivier, & IRONMAN 
-            //TODO: Add logging to DB calls 
-            //------------------------------------------------------------------------------------------
-            // CRUD ops below interacting with DB
-            //------------------------------------------------------------------------------------------
-            //// CREATE
-            static void insertSuperHero(Heroes superHero)
-            {
-                //Insert Data to database using the SaveChanges method
-                //Create a new instance of DbContext
-                using (var db = new EFContext())
-                {
-                    //Using our superHero instance of the Model/Domain class Heroes 
+            _dbCRUD.insertSuperHero(superHero);
+            _dbCRUD.readSuperHero(superHero);
+            _dbCRUD.updateSuperHero(superHero);
+            _dbCRUD.deleteSuperHero(superHero); // TODO: wire this call to control flow of app based on user permissions
+            _dbCRUD.deleteSuperHero(superHero);
 
-                    superHero.CodeName = superHero.CodeName;
-                    superHero.Powers = superHero.Powers;
-                    superHero.SecretId = superHero.SecretId;
-                    superHero.HomeWorld = superHero.HomeWorld;
-                    superHero.TeamAffiliation = superHero.TeamAffiliation;
-                    superHero.TimeStamp = superHero.TimeStamp;
-                    db.Add(superHero);
-                    logger.Info(message: $"The inserted super Hero is: {superHero.CodeName} and the Type is: {superHero} using an instance of this database context: {db}");
-                    db.SaveChanges();
-
-                }
-
-            }
-            insertSuperHero(superHero);
-
-
-            //READ USes The SELECT method
-            static void readSuperHero(Heroes superHero)
-            {
-                using (var db = new EFContext())
-                {
-                    List<Heroes> heroes = db.Heroes.ToList();
-                    foreach (Heroes h in heroes)
-                    {
-                        Console.WriteLine("{0} {1}", h.Id, h.CodeName);
-                    }
-
-                }
-            }
-            readSuperHero(superHero);
-            //UPDATE uses the FIND method 
-            static void updateSuperHero(Heroes superHero)
-            {
-                using (var db = new EFContext())
-                {
-                    Heroes hero = new Heroes();
-                    hero = db.Heroes.Find(34);
-                    hero.CodeName = "Zatana";
-                    hero.HomeWorld = "Earth";
-                    hero.IsClone = "No";
-                    hero.Powers = "Mastery of Magic";
-                    hero.TeamAffiliation = "JLA";
-                    hero.TimeStamp = hero.TimeStamp;
-                    db.SaveChanges();
-                }
-            }
-
-            //updateSuperHero(superHero);
-
-
-            //DELETE is done using The REMOVE method of the DbSet
-            //TODO: Write some logic that deletes when a certain condition is met 
-            // if(superHero.Codename == RegExP(regExp)&& superHero.TimeStamp == DateTime("Within the last 24 hours") delete and return deleted entry )
-            string pattern = superHero.CodeName;
-            Regex regExp = new Regex(pattern);
-            Console.WriteLine($"Checking the value of regExp: { regExp}");
-
-            static void deleteSuperHero(Heroes superHero)
-            {
-                using (var db = new EFContext())
-                {
-                    superHero = db.Heroes.Find(23); // Must have a matching id or an exception will be thrown must pass some value to find
-                    db.Heroes.Remove(superHero);
-                    db.SaveChanges();
-
-                }
-            }
-
-            //deleteSuperHero(superHero);
-            readSuperHero(superHero);
-
-            //Delete duplicate Heroes 
-            static void deleteDuplicateHero(Heroes superHero)
-            {
-                using (var db = new EFContext())
-                {
-                    var dupeHero = db.Heroes
-                        .AsEnumerable()  // had to add AsEnumerable to make it LINQ to SQL translatable big hassle OMG lol
-                            .GroupBy(sH => new
-                            {
-                                sH.CodeName,
-                                sH.SecretId,
-                                sH.HomeWorld
-                            })
-                        .SelectMany(grp => grp.Skip(1)).ToList();
-                    db.Heroes.RemoveRange(dupeHero);
-                    db.SaveChanges();
-                }
-
-            }
-            deleteDuplicateHero(superHero);
-            //------------------------------------------------------------------------------------------
-            // END OF CRUD OPS interacting with   DB
-            //------------------------------------------------------------------------------------------
             //Creating an instance of our Heroes class so that I can use the HeroData List<object> to store our HeroesData
-            Heroes heroData = new Heroes(); // Couldnt figure out a way to remove this  instance 
+            Hero heroData = new Hero(); // Couldnt figure out a way to remove this  instance 
             heroData.HeroData.Add(superHero); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
             heroData.HeroData.Add(superHero);
 
 
-            foreach (var hero in heroData.HeroData)
-            {
-                Console.WriteLine($"The value of heroData.HeroData{ hero}"); // the List is being overwritten by the next entry 
-            }
+            //foreach (var hero in heroData.HeroData)
+            //{
+            //    Console.WriteLine($"The value of heroData.HeroData{ hero}"); // the List is being overwritten by the next entry 
+            //}
 
             logger.Info(message: $"The Value of superHero.HeroData is:  {heroData.HeroData} and the Type is: { heroData.HeroData.GetType().FullName}");
 
