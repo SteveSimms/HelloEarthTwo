@@ -16,6 +16,6 @@ namespace HelloEarthTwo.Models
             optionsBuilder.UseSqlServer(connectionString);
 
         }
-        public DbSet<Heroes> Heroes { get; set; }
+        public DbSet<Hero> Heroes { get; set; }
     }
 }

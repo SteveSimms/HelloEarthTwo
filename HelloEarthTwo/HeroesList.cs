@@ -13,7 +13,7 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 namespace HelloEarthTwo
 {
 
-    public class HeroesList : Heroes
+    public class HeroesList : Hero
     {
 
 

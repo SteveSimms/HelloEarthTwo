@@ -823,3 +823,68 @@
 2021-09-10 13:20:56,571 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Friday, September 10  2021 1:20 PM and the Type is: System.String
 2021-09-10 13:21:01,064 [1] INFO HelloEarthTwo.HeroService - The inserted super Hero is: Quick Silver and the Type is: HelloEarthTwo.Heroes using an instance of this database context: HelloEarthTwo.Models.EFContext
 2021-09-10 13:21:02,235 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-10 15:54:54,860 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-10 15:54:54,906 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-10 15:54:54,910 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-10 15:54:54,934 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-10 15:55:10,908 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Namor and the Type is: System.String
+2021-09-10 15:56:02,151 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Super Human Strength and agility and the Type is: System.String
+2021-09-10 15:56:07,484 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: none and the Type is: System.String
+2021-09-10 15:56:25,505 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616  and the Type is: System.String
+2021-09-10 15:56:49,159 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avengers, Illuminati and the Type is: System.String
+2021-09-10 15:56:52,198 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: no and the Type is System.String
+2021-09-10 15:56:52,241 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Friday, September 10  2021 3:56 PM and the Type is: System.String
+2021-09-10 15:56:57,148 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Namor and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 15:56:58,003 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-10 16:07:09,952 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-10 16:07:09,990 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-10 16:07:10,050 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-10 16:07:10,103 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-10 16:07:28,168 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Nebulaa and the Type is: System.String
+2021-09-10 16:07:53,055 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Cybernectic Enhancements and the Type is: System.String
+2021-09-10 16:07:59,005 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Nebula and the Type is: System.String
+2021-09-10 16:09:56,965 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: unknown and the Type is: System.String
+2021-09-10 16:10:44,787 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avenengers,Guardians of the Galaxy and the Type is: System.String
+2021-09-10 16:10:47,400 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
+2021-09-10 16:10:47,448 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Friday, September 10  2021 4:10 PM and the Type is: System.String
+2021-09-10 16:10:52,224 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,256 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,270 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,291 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,306 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,323 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,339 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,377 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,387 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,401 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,410 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,422 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,437 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,453 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,464 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,475 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,485 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,492 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,502 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,510 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,517 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,524 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,537 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,544 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,548 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,559 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,570 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,574 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,577 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,590 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,598 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,602 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,605 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,609 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,622 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,627 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,632 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,635 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,638 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,776 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Nebulaa and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 16:10:53,807 [1] INFO HelloEarthTwo.Services.DBCRUD - The inserted super Hero is: Batman and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext

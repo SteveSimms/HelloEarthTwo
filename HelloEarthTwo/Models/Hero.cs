@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HelloEarthTwo
 {
-    public class Heroes : HeroService
+    public class Hero : HeroService
     {
         public int Id { get; set; }
         public string CodeName { get; set; }
