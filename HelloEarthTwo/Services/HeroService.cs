@@ -97,6 +97,7 @@ namespace HelloEarthTwo
                     superHero.TeamAffiliation = superHero.TeamAffiliation;
                     superHero.TimeStamp = superHero.TimeStamp;
                     db.Add(superHero);
+                    logger.Info(message: $"The inserted super Hero is: {superHero.CodeName} and the Type is: {superHero} using an instance of this database context: {db}");
                     db.SaveChanges();
 
                 }
@@ -136,7 +137,7 @@ namespace HelloEarthTwo
                 }
             }
 
-            updateSuperHero(superHero);
+            //updateSuperHero(superHero);
 
 
             //DELETE is done using The REMOVE method of the DbSet
@@ -145,6 +146,7 @@ namespace HelloEarthTwo
             string pattern = superHero.CodeName;
             Regex regExp = new Regex(pattern);
             Console.WriteLine($"Checking the value of regExp: { regExp}");
+
             static void deleteSuperHero(Heroes superHero)
             {
                 using (var db = new EFContext())
@@ -156,7 +158,7 @@ namespace HelloEarthTwo
                 }
             }
 
-            deleteSuperHero(superHero);
+            //deleteSuperHero(superHero);
             readSuperHero(superHero);
 
             //Delete duplicate Heroes 
