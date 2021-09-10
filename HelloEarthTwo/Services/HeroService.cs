@@ -106,7 +106,7 @@ namespace HelloEarthTwo
             insertSuperHero(superHero);
 
 
-            //READ USes The SELECT method
+            //READ Uses The SELECT method
             static void readSuperHero(Heroes superHero)
             {
                 using (var db = new EFContext())
@@ -114,12 +114,13 @@ namespace HelloEarthTwo
                     List<Heroes> heroes = db.Heroes.ToList();
                     foreach (Heroes h in heroes)
                     {
-                        Console.WriteLine("{0} {1}", h.Id, h.CodeName);
+                        Console.WriteLine($"{h.Id} {h.CodeName}");
                     }
 
                 }
             }
-            readSuperHero(superHero);
+            //readSuperHero(superHero);
+
             //UPDATE uses the FIND method 
             static void updateSuperHero(Heroes superHero)
             {
@@ -190,10 +191,10 @@ namespace HelloEarthTwo
             heroData.HeroData.Add(superHero);
 
 
-            foreach (var hero in heroData.HeroData)
-            {
-                Console.WriteLine($"The value of heroData.HeroData{ hero}"); // the List is being overwritten by the next entry 
-            }
+            //foreach (var hero in heroData.HeroData)
+            //{
+            //    Console.WriteLine($"The value of heroData.HeroData{ hero}"); // the List is being overwritten by the next entry 
+            //}
 
             logger.Info(message: $"The Value of superHero.HeroData is:  {heroData.HeroData} and the Type is: { heroData.HeroData.GetType().FullName}");
 

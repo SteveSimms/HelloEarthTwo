@@ -741,3 +741,85 @@
 2021-09-10 12:29:07,645 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Friday, September 10  2021 12:29 PM and the Type is: System.String
 2021-09-10 12:29:13,580 [1] INFO HelloEarthTwo.HeroService - The inserted super Hero is: Captain America and the Type is: HelloEarthTwo.Models.EFContext,HelloEarthTwo.Heroes
 2021-09-10 12:29:15,088 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-10 12:46:32,812 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-10 12:46:46,071 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-10 12:46:46,072 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-10 12:46:46,089 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-10 12:54:40,624 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Black Panther and the Type is: System.String
+2021-09-10 12:54:47,864 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Super Soldier and the Type is: System.String
+2021-09-10 12:54:52,559 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: T'Challa and the Type is: System.String
+2021-09-10 12:54:57,352 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-10 12:55:10,480 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avengers, Illuminati and the Type is: System.String
+2021-09-10 12:55:13,928 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
+2021-09-10 12:55:13,961 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Friday, September 10  2021 12:55 PM and the Type is: System.String
+2021-09-10 12:55:22,492 [1] INFO HelloEarthTwo.HeroService - The inserted super Hero is: Black Panther and the Type is: HelloEarthTwo.Heroes using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 12:55:25,122 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-10 12:58:10,621 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-10 12:58:10,654 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-10 12:58:10,657 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-10 12:58:10,685 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-10 12:59:29,687 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-10 12:59:29,731 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-10 12:59:29,745 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-10 12:59:29,774 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-10 12:59:39,775 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Black Widow and the Type is: System.String
+2021-09-10 12:59:44,297 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  n/a and the Type is: System.String
+2021-09-10 12:59:57,991 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Natasha Romanoff and the Type is: System.String
+2021-09-10 13:00:02,287 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-10 13:00:05,737 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avengers and the Type is: System.String
+2021-09-10 13:00:09,832 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
+2021-09-10 13:00:09,843 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Friday, September 10  2021 1:00 PM and the Type is: System.String
+2021-09-10 13:00:13,976 [1] INFO HelloEarthTwo.HeroService - The inserted super Hero is: Black Widow and the Type is: HelloEarthTwo.Heroes using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 13:00:15,277 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-10 13:02:49,838 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-10 13:02:49,929 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-10 13:02:49,935 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-10 13:02:50,017 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-10 13:03:12,312 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Superman and the Type is: System.String
+2021-09-10 13:03:15,289 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Flight and the Type is: System.String
+2021-09-10 13:03:22,767 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Clark Kent and the Type is: System.String
+2021-09-10 13:03:26,632 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth and the Type is: System.String
+2021-09-10 13:03:34,312 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Justice League and the Type is: System.String
+2021-09-10 13:03:36,328 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: no and the Type is System.String
+2021-09-10 13:03:36,347 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Friday, September 10  2021 1:03 PM and the Type is: System.String
+2021-09-10 13:03:40,502 [1] INFO HelloEarthTwo.HeroService - The inserted super Hero is: Superman and the Type is: HelloEarthTwo.Heroes using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 13:08:28,055 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-10 13:15:27,835 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-10 13:15:28,016 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-10 13:15:28,095 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-10 13:15:28,141 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-10 13:15:50,928 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Vision and the Type is: System.String
+2021-09-10 13:16:06,224 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Matter Manipulation and the Type is: System.String
+2021-09-10 13:16:09,232 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: none and the Type is: System.String
+2021-09-10 13:16:13,272 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-10 13:16:18,591 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avengers and the Type is: System.String
+2021-09-10 13:16:21,064 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: no and the Type is System.String
+2021-09-10 13:16:21,089 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Friday, September 10  2021 1:16 PM and the Type is: System.String
+2021-09-10 13:16:28,243 [1] INFO HelloEarthTwo.HeroService - The inserted super Hero is: Vision and the Type is: HelloEarthTwo.Heroes using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 13:16:29,569 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-10 13:17:07,292 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-10 13:17:07,334 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-10 13:17:07,337 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-10 13:17:07,437 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-10 13:17:18,544 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  The Scarlett Witch and the Type is: System.String
+2021-09-10 13:17:23,424 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Hex Magic and the Type is: System.String
+2021-09-10 13:17:29,144 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Wanda Maximoff and the Type is: System.String
+2021-09-10 13:17:33,792 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-10 13:17:37,265 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avengers and the Type is: System.String
+2021-09-10 13:17:39,672 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
+2021-09-10 13:17:39,686 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Friday, September 10  2021 1:17 PM and the Type is: System.String
+2021-09-10 13:17:44,817 [1] INFO HelloEarthTwo.HeroService - The inserted super Hero is: The Scarlett Witch and the Type is: HelloEarthTwo.Heroes using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 13:17:46,249 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+2021-09-10 13:20:07,585 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-10 13:20:08,041 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-10 13:20:08,081 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-10 13:20:08,161 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-10 13:20:20,976 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Quick Silver and the Type is: System.String
+2021-09-10 13:20:28,297 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Hyper Speed and the Type is: System.String
+2021-09-10 13:20:40,947 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Pietro Maximoff and the Type is: System.String
+2021-09-10 13:20:45,952 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-10 13:20:52,464 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: Avengers and the Type is: System.String
+2021-09-10 13:20:56,544 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
+2021-09-10 13:20:56,571 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Friday, September 10  2021 1:20 PM and the Type is: System.String
+2021-09-10 13:21:01,064 [1] INFO HelloEarthTwo.HeroService - The inserted super Hero is: Quick Silver and the Type is: HelloEarthTwo.Heroes using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-10 13:21:02,235 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HeroData is:  System.Collections.Generic.List`1[System.Object] and the Type is: System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
