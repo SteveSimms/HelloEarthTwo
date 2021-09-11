@@ -17,5 +17,9 @@ namespace HelloEarthTwo.Models
 
         }
         public DbSet<Hero> Heroes { get; set; }
+
+        public DbSet<AntiHero> AntiHeroes { get; set; }
+
+        public DbSet<Villain> Villains { get; set; }
     }
 }
