@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,12 +30,10 @@ namespace HelloEarthTwo
         public object CaptureUserInput()
         {
             var superHero = new Hero();
-            // Initialize a new instance of the SpeechSynthesizer.
 
             logger.Info($"Here we are inside of {GetType().FullName}. Let's make some heroes...");
             //Instantiationg new Heroes class on superHero instance
-            Console.WriteLine($"Whats your code name? ");
-            //var superHero = new Heroes();
+            Console.WriteLine("Whats your Code name? ");
             superHero.CodeName = Console.ReadLine();
             logger.Info(message: $"The Value of superHero.CodeName is:  { superHero.CodeName} and the Type is: {superHero.CodeName.GetType().FullName}"); // not sure if we need the message param but am curious to see if the messages map to the message object
 
@@ -65,10 +62,9 @@ namespace HelloEarthTwo
             logger.Info(message: $"The Value of superHero.IsClone: {superHero.IsClone} and the Type is {superHero.IsClone.GetType().FullName}");
 
             superHero.TimeStamp = DateTime.Now.ToString("dddd, MMMM dd  yyyy h:mm tt");
-            //Heroes timeStamp = DateTime.UtcNow.Humanize();
             logger.Info(message: $"The Value of superHero.TimeStamp: {superHero.TimeStamp} and the Type is: {superHero.TimeStamp.GetType().FullName}");
 
-            Console.WriteLine($"Name: {superHero.CodeName}, Powers: {superHero.Powers} ,Secret Identity {superHero.SecretId}, home world: {superHero.HomeWorld} clone status: {superHero.IsClone} at {superHero.TimeStamp}");
+            Console.WriteLine($"Name: {superHero.CodeName}, Powers: {superHero.Powers}, Secret Identity {superHero.SecretId}, Home world: {superHero.HomeWorld}, Clone status: {superHero.IsClone} at {superHero.TimeStamp}");
 
             Console.WriteLine("Would you like to add more heroes?");
             Console.WriteLine("Enter Yes or Y to add another Hero");
@@ -88,11 +84,6 @@ namespace HelloEarthTwo
             heroData.HeroData.Add(superHero); //adding heroesOfEarthTwo to the HeroData List <object> via the .Add() method
             heroData.HeroData.Add(superHero);
 
-
-            //foreach (var hero in heroData.HeroData)
-            //{
-            //    Console.WriteLine($"The value of heroData.HeroData{ hero}"); // the List is being overwritten by the next entry 
-            //}
 
             logger.Info(message: $"The Value of superHero.HeroData is:  {heroData.HeroData} and the Type is: { heroData.HeroData.GetType().FullName}");
 
@@ -126,7 +117,7 @@ namespace HelloEarthTwo
                 if (CheckIfEarth2() == true)
                 {
 
-                    callHeroesList.ConvertHeroInput(superHero);// Provide an instance name 
+                    callHeroesList.ConvertHeroInput(superHero);
                 }
                 else if (superHero.IsClone == "true")
                 {
