@@ -9,7 +9,7 @@ namespace HelloEarthTwo.Models
 {
     class EFContext : DbContext
     {
-        private const string connectionString = "Server=(localdb)\\mssqllocaldb;Database=EFCore;Trusted_COnnection=True;"; //May have to c hange localbd to localhost
+        private const string connectionString = "Server=(localdb)\\mssqllocaldb;Database=EFCore;Trusted_Connection=True;"; //May have to c hange localbd to localhost
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
