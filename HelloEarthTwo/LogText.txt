@@ -1004,3 +1004,15 @@
 2021-09-11 15:20:53,749 [1] INFO HelloEarthTwo.Services.DbCrudService - The inserted super Hero is: Cyclops and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
 2021-09-11 15:20:53,753 [1] INFO HelloEarthTwo.Services.DbCrudService - The inserted super Hero is: Cyclops and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
 2021-09-11 15:20:53,890 [1] INFO HelloEarthTwo.Services.DbCrudService - The inserted super Hero is: Cyclops and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-12 10:50:30,312 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-12 10:50:30,402 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-12 10:50:30,457 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-12 10:50:30,476 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-12 10:50:53,950 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Havok and the Type is: System.String
+2021-09-12 10:51:03,873 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  cosmic energy fields and the Type is: System.String
+2021-09-12 10:51:08,007 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Alex Summers and the Type is: System.String
+2021-09-12 10:51:12,616 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-12 10:51:17,894 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: X-Force and the Type is: System.String
+2021-09-12 10:51:19,677 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
+2021-09-12 10:51:19,809 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Sunday, September 12  2021 10:51 AM and the Type is: System.String
+2021-09-12 10:51:30,633 [1] INFO HelloEarthTwo.Services.DbCrudService - The inserted super Hero is: Havok and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext

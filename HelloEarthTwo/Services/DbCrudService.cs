@@ -15,7 +15,7 @@ namespace HelloEarthTwo.Services
         private static readonly ILog logger = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
 
-    
+
         //TODO: WIRE up CRUD interactivity with ADMIN roles for Batman, T'Challa, Xaivier, & IRONMAN 
         //------------------------------------------------------------------------------------------
         // CRUD ops below interacting with DB
@@ -39,6 +39,30 @@ namespace HelloEarthTwo.Services
                 superHero.TimeStamp = superHero.TimeStamp;
                 db.Add(superHero);
                 logger.Info(message: $"The inserted super Hero is: {superHero.CodeName} and the Type is: {superHero} using an instance of this database context: {db}");
+                db.SaveChanges();
+
+            }
+
+        }
+
+        // Currently not working need to update the db with new models and wire anti hero and villain into the app logic 
+        public void InsertAntiHero(AntiHero antiHero)
+        {
+            //Insert Data to database using the SaveChanges method
+            //Create a new instance of DbContext
+            using (var db = new EFContext())
+            {
+                //Using our superHero instance of the Model/Domain class Heroes 
+
+                antiHero.CodeName = "Magneto";
+                antiHero.Powers = "Manipulation of electromagnetic fields";
+                antiHero.SecretId = "Erik Lehnsherr";
+                antiHero.TeamAffiliation = "Brotherhood Of Evil Mutants, X-Men";
+                antiHero.TimeStamp = antiHero.TimeStamp;
+                antiHero.IsClone = "No";
+                antiHero.IsAntiHero = true;
+                db.Add(antiHero);
+                logger.Info(message: $"The inserted Anti Hero is: {antiHero.CodeName} and the Type is: {antiHero} using an instance of this database context: {db}");
                 db.SaveChanges();
 
             }

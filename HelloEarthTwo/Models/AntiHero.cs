@@ -9,15 +9,8 @@ namespace HelloEarthTwo.Models
 {
     public class AntiHero : Hero
     {
-        public new int Id { get; set; }
-        public new string CodeName { get; set; }
-        public new string Powers { get; set; }
-        public new string SecretId { get; set; }
-        public new string HomeWorld { get; set; }
-        public new string TeamAffiliation { get; set; }
-        public new string IsClone { get; set; }
-        public new string TimeStamp { get; set; }
 
+        public bool IsAntiHero { get; set; }
         [NotMapped]
         public List<object> AntiHeroData { get; set; } = new List<object>();
     }
