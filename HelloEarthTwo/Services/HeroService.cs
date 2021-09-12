@@ -30,6 +30,8 @@ namespace HelloEarthTwo
         public object CaptureUserInput()
         {
             var superHero = new Hero();
+            var antiHero = new AntiHero();
+            var villain = new Villain();
 
             logger.Info($"Here we are inside of {GetType().FullName}. Let's make some heroes...");
             //Instantiationg new Heroes class on superHero instance
@@ -78,6 +80,11 @@ namespace HelloEarthTwo
             _dbCRUD.UpdateSuperHero(superHero);
             _dbCRUD.DeleteSuperHero(superHero); // TODO: wire this call to control flow of app based on user permissions
             _dbCRUD.DeleteDuplicateHero(superHero);
+
+            _dbCRUD.InsertAntiHero(antiHero); // Need to update the db to accept new model this line is currently not working 
+
+
+
 
             //Creating an instance of our Heroes class so that I can use the HeroData List<object> to store our HeroesData
             Hero heroData = new Hero(); // Couldnt figure out a way to remove this  instance 
