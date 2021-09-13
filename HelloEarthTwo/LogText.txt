@@ -1016,3 +1016,16 @@
 2021-09-12 10:51:19,677 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
 2021-09-12 10:51:19,809 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Sunday, September 12  2021 10:51 AM and the Type is: System.String
 2021-09-12 10:51:30,633 [1] INFO HelloEarthTwo.Services.DbCrudService - The inserted super Hero is: Havok and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-13 11:53:25,649 [1] INFO HelloEarthTwo.Program - Hello logging world!
+2021-09-13 11:53:25,685 [1] WARN HelloEarthTwo.Program - Warn!
+2021-09-13 11:53:25,756 [1] DEBUG HelloEarthTwo.Program - Lets Debug log4net.Repository.Hierarchy.Hierarchy
+2021-09-13 11:53:25,844 [1] INFO HelloEarthTwo.HeroService - Here we are inside of HelloEarthTwo.HeroService. Let's make some heroes...
+2021-09-13 11:53:30,818 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.CodeName is:  Cyclops and the Type is: System.String
+2021-09-13 11:53:35,636 [1] DEBUG HelloEarthTwo.HeroService - The Value of superHero.Powers is:  Optic Blasts and the Type is: System.String
+2021-09-13 11:53:40,608 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.SecretId: Scott Summers and the Type is: System.String
+2021-09-13 11:53:44,718 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.HomeWorld: Earth-616 and the Type is: System.String
+2021-09-13 11:53:59,911 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TeamAffiliation: X-Men, X-Factor and the Type is: System.String
+2021-09-13 11:54:02,185 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.IsClone: No and the Type is System.String
+2021-09-13 11:54:02,296 [1] INFO HelloEarthTwo.HeroService - The Value of superHero.TimeStamp: Monday, September 13  2021 11:54 AM and the Type is: System.String
+2021-09-13 11:54:09,987 [1] INFO HelloEarthTwo.Services.DbCrudService - The inserted super Hero is: Cyclops and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
+2021-09-13 11:54:11,929 [1] INFO HelloEarthTwo.Services.DbCrudService - The inserted super Hero is: Cyclops and the Type is: HelloEarthTwo.Hero using an instance of this database context: HelloEarthTwo.Models.EFContext
